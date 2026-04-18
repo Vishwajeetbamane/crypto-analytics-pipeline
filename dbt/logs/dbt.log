@@ -1,0 +1,2218 @@
+[0m22:18:02.644737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7531ff207950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7531ff14be60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7531fe320bc0>]}
+
+
+============================== 22:18:02.653489 | 0f09fad0-18b1-418b-b207-230d38562549 ==============================
+[0m22:18:02.653489 [info ] [MainThread]: Running with dbt=1.11.8
+[0m22:18:02.654160 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'log_cache_events': 'False', 'quiet': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'no_print': 'None', 'introspect': 'True', 'log_format': 'default', 'empty': 'None', 'cache_selected_only': 'False', 'version_check': 'True', 'static_parser': 'True', 'target_path': 'None', 'profiles_dir': '/home/vishwajeet/.dbt', 'indirect_selection': 'eager', 'log_path': 'logs', 'invocation_command': 'dbt init .', 'printer_width': '80', 'partial_parse': 'True', 'debug': 'False', 'write_json': 'True', 'use_experimental_parser': 'False'}
+[0m22:20:10.705672 [error] [MainThread]: Encountered an error:
+
+[0m22:20:10.711729 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/vishwajeet/capstone_DT/dbt/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishwajeet/capstone_DT/dbt/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishwajeet/capstone_DT/dbt/.venv/lib/python3.12/site-packages/dbt/cli/main.py", line 488, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/vishwajeet/capstone_DT/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishwajeet/capstone_DT/dbt/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishwajeet/capstone_DT/dbt/.venv/lib/python3.12/site-packages/click/termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/vishwajeet/capstone_DT/dbt/.venv/lib/python3.12/site-packages/click/termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m22:20:10.713481 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 128.14093, "process_in_blocks": "65616", "process_kernel_time": 0.601634, "process_mem_max_rss": "104356", "process_out_blocks": "680", "process_user_time": 1.818744}
+[0m22:20:10.714732 [debug] [MainThread]: Command `dbt init` failed at 22:20:10.714356 after 128.14 seconds
+[0m22:20:10.715852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7531fca79dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7531fc9060c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7531ff14be60>]}
+[0m22:20:10.716843 [debug] [MainThread]: Flushing usage events
+[0m22:20:12.182332 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:54:26.477109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4f7edf4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4f6025ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4f60d5c70>]}
+
+
+============================== 23:54:26.486626 | b6677eda-0922-4c9e-8ced-bd73f5c684fc ==============================
+[0m23:54:26.486626 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:54:26.487365 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'False', 'static_parser': 'True', 'write_json': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'fail_fast': 'False', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'partial_parse': 'True', 'indirect_selection': 'eager', 'warn_error': 'None', 'target_path': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'log_cache_events': 'False', 'debug': 'False', 'version_check': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'quiet': 'False', 'profiles_dir': '/home/vishwajeet/.dbt'}
+[0m23:54:28.681608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b6677eda-0922-4c9e-8ced-bd73f5c684fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4d6a7acc0>]}
+[0m23:54:28.759404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b6677eda-0922-4c9e-8ced-bd73f5c684fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4f5ed2870>]}
+[0m23:54:28.760441 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m23:54:28.973782 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m23:54:28.974651 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:54:28.975172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b6677eda-0922-4c9e-8ced-bd73f5c684fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4d7fb1910>]}
+[0m23:54:30.506960 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.crypto_pipeline.marts
+[0m23:54:30.523766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b6677eda-0922-4c9e-8ced-bd73f5c684fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4d60681a0>]}
+[0m23:54:30.621112 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m23:54:30.624511 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m23:54:30.670536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b6677eda-0922-4c9e-8ced-bd73f5c684fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4d54a8740>]}
+[0m23:54:30.671189 [info ] [MainThread]: Found 1 model, 1 source, 539 macros
+[0m23:54:30.671707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b6677eda-0922-4c9e-8ced-bd73f5c684fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4d5f933e0>]}
+[0m23:54:30.674150 [info ] [MainThread]: 
+[0m23:54:30.674752 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m23:54:30.675206 [info ] [MainThread]: 
+[0m23:54:30.675969 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:54:30.677557 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m23:54:30.678391 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:54:31.504604 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211_crypto_project1'
+[0m23:54:31.505413 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:54:32.214153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b6677eda-0922-4c9e-8ced-bd73f5c684fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4f5f3c980>]}
+[0m23:54:32.214964 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:54:32.274596 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m23:54:32.275826 [info ] [Thread-1 (]: 1 of 1 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m23:54:32.276777 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m23:54:32.277540 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m23:54:32.286141 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m23:54:32.290931 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m23:54:32.330227 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m23:54:32.334485 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(vendorid as int64) as vendor_id,
+cast(symbol as string) as symbol,
+cast(market_cap as float64) as market_cap,
+cast(total_volume as float64) as total_volume,
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(last_updated as timestamp) as last_updated,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m23:54:32.335175 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:54:33.540703 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:b05890d5-81a3-4981-855e-4126eb33c729&page=queryresults
+[0m23:54:33.965980 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:b05890d5-81a3-4981-855e-4126eb33c729&page=queryresults
+[0m23:54:33.985931 [debug] [Thread-1 (]: Database Error in model stg_crypto (models/staging/stg_crypto.sql)
+  Unrecognized name: vendorid at [8:6]
+  compiled code at target/run/crypto_pipeline/models/staging/stg_crypto.sql
+[0m23:54:33.991212 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b6677eda-0922-4c9e-8ced-bd73f5c684fc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4f7c506b0>]}
+[0m23:54:33.992583 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model crypto_project1.stg_crypto ................ [[31mERROR[0m in 1.71s]
+[0m23:54:33.993437 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m23:54:33.994203 [debug] [Thread-6 (]: Marking all children of 'model.crypto_pipeline.stg_crypto' to be skipped because of status 'error'.  Reason: Database Error in model stg_crypto (models/staging/stg_crypto.sql)
+  Unrecognized name: vendorid at [8:6]
+  compiled code at target/run/crypto_pipeline/models/staging/stg_crypto.sql.
+[0m23:54:33.997608 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:54:34.050655 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:54:34.051165 [debug] [MainThread]: Connection 'list_dtc-course-486211' was properly closed.
+[0m23:54:34.051605 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_crypto' was properly closed.
+[0m23:54:34.052072 [info ] [MainThread]: 
+[0m23:54:34.052610 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.38 seconds (3.38s).
+[0m23:54:34.053486 [debug] [MainThread]: Command end result
+[0m23:54:34.094379 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m23:54:34.096903 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m23:54:34.103156 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m23:54:34.103719 [info ] [MainThread]: 
+[0m23:54:34.104241 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m23:54:34.104730 [info ] [MainThread]: 
+[0m23:54:34.105254 [error] [MainThread]: [31mFailure in model stg_crypto (models/staging/stg_crypto.sql)[0m
+[0m23:54:34.105792 [error] [MainThread]:   Database Error in model stg_crypto (models/staging/stg_crypto.sql)
+  Unrecognized name: vendorid at [8:6]
+  compiled code at target/run/crypto_pipeline/models/staging/stg_crypto.sql
+[0m23:54:34.106215 [info ] [MainThread]: 
+[0m23:54:34.106704 [info ] [MainThread]:   compiled code at target/compiled/crypto_pipeline/models/staging/stg_crypto.sql
+[0m23:54:34.107123 [info ] [MainThread]: 
+[0m23:54:34.107619 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m23:54:34.108469 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 7.703256, "process_in_blocks": "296408", "process_kernel_time": 1.352292, "process_mem_max_rss": "235260", "process_out_blocks": "3888", "process_user_time": 5.393447}
+[0m23:54:34.109059 [debug] [MainThread]: Command `dbt run` failed at 23:54:34.108936 after 7.70 seconds
+[0m23:54:34.109531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4f9d5b590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4f758db80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc4f8c24560>]}
+[0m23:54:34.110154 [debug] [MainThread]: Flushing usage events
+[0m23:54:35.644833 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:55:22.337702 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773eff03a6c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773efc484860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773efc591b80>]}
+
+
+============================== 23:55:22.344159 | baaaff43-9d8b-4579-ae0c-b10db61a148a ==============================
+[0m23:55:22.344159 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:55:22.344986 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'use_experimental_parser': 'False', 'static_parser': 'True', 'fail_fast': 'False', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'use_colors': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'profiles_dir': '/home/vishwajeet/.dbt', 'no_print': 'None', 'target_path': 'None', 'log_cache_events': 'False', 'version_check': 'True', 'invocation_command': 'dbt run', 'write_json': 'True', 'debug': 'False', 'printer_width': '80', 'partial_parse': 'True', 'introspect': 'True', 'warn_error': 'None', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager'}
+[0m23:55:23.452780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'baaaff43-9d8b-4579-ae0c-b10db61a148a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773ee043aa50>]}
+[0m23:55:23.528128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'baaaff43-9d8b-4579-ae0c-b10db61a148a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773ee0779400>]}
+[0m23:55:23.529025 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m23:55:23.716428 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m23:55:23.939449 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:55:23.940283 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/staging/stg_crypto.sql
+[0m23:55:24.245785 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.crypto_pipeline.marts
+[0m23:55:24.264149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'baaaff43-9d8b-4579-ae0c-b10db61a148a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773edbdffef0>]}
+[0m23:55:24.361444 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m23:55:24.363981 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m23:55:24.373556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'baaaff43-9d8b-4579-ae0c-b10db61a148a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773edbdf5820>]}
+[0m23:55:24.374330 [info ] [MainThread]: Found 1 model, 1 source, 539 macros
+[0m23:55:24.374835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'baaaff43-9d8b-4579-ae0c-b10db61a148a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773edbdcfcb0>]}
+[0m23:55:24.377174 [info ] [MainThread]: 
+[0m23:55:24.377806 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m23:55:24.378247 [info ] [MainThread]: 
+[0m23:55:24.378915 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:55:24.380356 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m23:55:24.381189 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:55:25.165366 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m23:55:25.166381 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:55:25.884661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'baaaff43-9d8b-4579-ae0c-b10db61a148a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773efd1f4bc0>]}
+[0m23:55:25.885482 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:55:25.940075 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m23:55:25.941264 [info ] [Thread-1 (]: 1 of 1 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m23:55:25.942170 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m23:55:25.943171 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m23:55:25.953228 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m23:55:25.954670 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m23:55:25.993591 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m23:55:25.994713 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as int64) as coin_id,
+cast(symbol as string) as symbol,
+cast(market_cap as float64) as market_cap,
+cast(total_volume as float64) as total_volume,
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(last_updated as timestamp) as last_updated,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m23:55:25.995413 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:55:26.934097 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:3c2df265-6766-4531-b02a-a43cc01021d9&page=queryresults
+[0m23:55:27.734723 [debug] [Thread-1 (]: SQL status: OK in 0.800 seconds
+[0m23:55:27.839009 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'baaaff43-9d8b-4579-ae0c-b10db61a148a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773ee04c73e0>]}
+[0m23:55:27.840052 [info ] [Thread-1 (]: 1 of 1 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 1.89s]
+[0m23:55:27.840909 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m23:55:27.843873 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:55:27.896296 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:55:27.896807 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_crypto' was properly closed.
+[0m23:55:27.897215 [info ] [MainThread]: 
+[0m23:55:27.897678 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.52 seconds (3.52s).
+[0m23:55:27.898559 [debug] [MainThread]: Command end result
+[0m23:55:27.938829 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m23:55:27.941565 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m23:55:27.948674 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m23:55:27.949239 [info ] [MainThread]: 
+[0m23:55:27.949802 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:55:27.950312 [info ] [MainThread]: 
+[0m23:55:27.950806 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m23:55:27.951634 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.6837893, "process_in_blocks": "3752", "process_kernel_time": 0.743318, "process_mem_max_rss": "239220", "process_out_blocks": "3752", "process_user_time": 4.294731}
+[0m23:55:27.952379 [debug] [MainThread]: Command `dbt run` succeeded at 23:55:27.952196 after 5.68 seconds
+[0m23:55:27.952860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773efc254ce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773efbf0ddc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773efbf0dfa0>]}
+[0m23:55:27.953321 [debug] [MainThread]: Flushing usage events
+[0m23:55:30.109921 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:02:20.630832 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0d67a9940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0d47f7080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0d4f8e960>]}
+
+
+============================== 00:02:20.637038 | 5a73abdc-26f5-43c2-b1c9-33c888dc991e ==============================
+[0m00:02:20.637038 [info ] [MainThread]: Running with dbt=1.11.8
+[0m00:02:20.637854 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'log_cache_events': 'False', 'no_print': 'None', 'empty': 'False', 'warn_error': 'None', 'quiet': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'static_parser': 'True', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'cache_selected_only': 'False', 'target_path': 'None', 'profiles_dir': '/home/vishwajeet/.dbt', 'indirect_selection': 'eager', 'write_json': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'printer_width': '80', 'use_experimental_parser': 'False', 'use_colors': 'True', 'fail_fast': 'False', 'version_check': 'True'}
+[0m00:02:21.718122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5a73abdc-26f5-43c2-b1c9-33c888dc991e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0d51b5190>]}
+[0m00:02:21.801315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5a73abdc-26f5-43c2-b1c9-33c888dc991e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0b9452a50>]}
+[0m00:02:21.802237 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m00:02:21.988303 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m00:02:22.212602 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:02:22.213394 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/staging/stg_crypto.sql
+[0m00:02:22.512621 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.crypto_pipeline.marts
+[0m00:02:22.530694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5a73abdc-26f5-43c2-b1c9-33c888dc991e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0b88a3350>]}
+[0m00:02:22.630314 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m00:02:22.632727 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m00:02:22.644100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5a73abdc-26f5-43c2-b1c9-33c888dc991e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0b81f17c0>]}
+[0m00:02:22.644878 [info ] [MainThread]: Found 1 model, 1 source, 539 macros
+[0m00:02:22.645411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5a73abdc-26f5-43c2-b1c9-33c888dc991e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0b81bb290>]}
+[0m00:02:22.647640 [info ] [MainThread]: 
+[0m00:02:22.648258 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m00:02:22.648738 [info ] [MainThread]: 
+[0m00:02:22.649815 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m00:02:22.651737 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m00:02:22.653071 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:02:23.409525 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m00:02:23.410393 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:02:24.118874 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5a73abdc-26f5-43c2-b1c9-33c888dc991e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0d470cb00>]}
+[0m00:02:24.119835 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:02:24.175965 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m00:02:24.177285 [info ] [Thread-1 (]: 1 of 1 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m00:02:24.178404 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m00:02:24.179105 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m00:02:24.189814 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m00:02:24.191815 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m00:02:24.248196 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m00:02:24.249536 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as int64) as coin_id,
+cast(symbol as string) as symbol,
+cast(market_cap as float64) as market_cap,
+cast(total_volume as float64) as total_volume,
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(last_updated as timestamp) as timestamp,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m00:02:24.250622 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m00:02:25.432106 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:936a0c53-e940-467f-baa6-427d650020a6&page=queryresults
+[0m00:02:26.300843 [debug] [Thread-1 (]: SQL status: OK in 0.868 seconds
+[0m00:02:26.366963 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5a73abdc-26f5-43c2-b1c9-33c888dc991e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0b8e27560>]}
+[0m00:02:26.368738 [info ] [Thread-1 (]: 1 of 1 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 2.19s]
+[0m00:02:26.370061 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m00:02:26.373375 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:02:26.426322 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:02:26.426869 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_crypto' was properly closed.
+[0m00:02:26.427421 [info ] [MainThread]: 
+[0m00:02:26.427922 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.78 seconds (3.78s).
+[0m00:02:26.428926 [debug] [MainThread]: Command end result
+[0m00:02:26.469170 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m00:02:26.471693 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m00:02:26.478149 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m00:02:26.478681 [info ] [MainThread]: 
+[0m00:02:26.479218 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:02:26.479707 [info ] [MainThread]: 
+[0m00:02:26.480161 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m00:02:26.480959 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.922237, "process_in_blocks": "0", "process_kernel_time": 0.831862, "process_mem_max_rss": "236864", "process_out_blocks": "3512", "process_user_time": 4.277027}
+[0m00:02:26.481601 [debug] [MainThread]: Command `dbt run` succeeded at 00:02:26.481472 after 5.92 seconds
+[0m00:02:26.482044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0a89553d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0b8c84da0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f0d482a7e0>]}
+[0m00:02:26.482500 [debug] [MainThread]: Flushing usage events
+[0m00:02:28.093439 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:34:52.974654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef04362bc20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef04374bb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef043225010>]}
+
+
+============================== 00:34:52.982497 | 0d9f259b-c4ab-4ba9-888d-713c541a1673 ==============================
+[0m00:34:52.982497 [info ] [MainThread]: Running with dbt=1.11.8
+[0m00:34:52.983265 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'empty': 'False', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'version_check': 'True', 'printer_width': '80', 'no_print': 'None', 'introspect': 'True', 'partial_parse': 'True', 'profiles_dir': '/home/vishwajeet/.dbt', 'target_path': 'None', 'warn_error': 'None', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'quiet': 'False', 'indirect_selection': 'eager', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'use_colors': 'True', 'log_cache_events': 'False', 'write_json': 'True', 'log_format': 'default'}
+[0m00:34:55.102464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0d9f259b-c4ab-4ba9-888d-713c541a1673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef029daa930>]}
+[0m00:34:55.189830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0d9f259b-c4ab-4ba9-888d-713c541a1673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef023cefc20>]}
+[0m00:34:55.190804 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m00:34:55.400824 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m00:34:55.689048 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m00:34:55.689734 [debug] [MainThread]: Partial parsing: added file: crypto_pipeline://models/marts/fact_crypto_metrics.sql
+[0m00:34:55.690231 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/staging/stg_crypto.sql
+[0m00:34:56.029508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0d9f259b-c4ab-4ba9-888d-713c541a1673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef023288e00>]}
+[0m00:34:56.123016 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m00:34:56.126359 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m00:34:56.142452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0d9f259b-c4ab-4ba9-888d-713c541a1673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef0227ed6a0>]}
+[0m00:34:56.143197 [info ] [MainThread]: Found 2 models, 1 source, 539 macros
+[0m00:34:56.143678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d9f259b-c4ab-4ba9-888d-713c541a1673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef0227be9f0>]}
+[0m00:34:56.146047 [info ] [MainThread]: 
+[0m00:34:56.146664 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m00:34:56.147166 [info ] [MainThread]: 
+[0m00:34:56.148241 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m00:34:56.150127 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m00:34:56.151171 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:34:57.171870 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m00:34:57.172858 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:34:57.908868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d9f259b-c4ab-4ba9-888d-713c541a1673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef02347db20>]}
+[0m00:34:57.909686 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:34:57.967390 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m00:34:57.968570 [info ] [Thread-1 (]: 1 of 1 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m00:34:57.969384 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m00:34:57.969921 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m00:34:57.979392 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m00:34:57.981287 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m00:34:58.029427 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m00:34:58.030371 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as int64) as coin_id,
+cast(symbol as string) as symbol,
+cast(market_cap as float64) as market_cap,
+cast(total_volume as float64) as total_volume,
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+
+FORMAT_TIMESTAMP("%m/%d/%Y/%H/", last_updated) as timestamp,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m00:34:58.031054 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m00:34:58.943426 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:e1d29085-bbba-491b-aac9-86fb9e7fa094&page=queryresults
+[0m00:34:59.789078 [debug] [Thread-1 (]: SQL status: OK in 0.845 seconds
+[0m00:34:59.863838 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0d9f259b-c4ab-4ba9-888d-713c541a1673', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef04405fb00>]}
+[0m00:34:59.864888 [info ] [Thread-1 (]: 1 of 1 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 1.89s]
+[0m00:34:59.865881 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m00:34:59.868832 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:34:59.923426 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:34:59.924105 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_crypto' was properly closed.
+[0m00:34:59.925006 [info ] [MainThread]: 
+[0m00:34:59.925869 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.78 seconds (3.78s).
+[0m00:34:59.927102 [debug] [MainThread]: Command end result
+[0m00:34:59.971611 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m00:34:59.974488 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m00:34:59.982688 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m00:34:59.983234 [info ] [MainThread]: 
+[0m00:34:59.983776 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:34:59.984224 [info ] [MainThread]: 
+[0m00:34:59.984687 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m00:34:59.985642 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.083746, "process_in_blocks": "293792", "process_kernel_time": 1.424808, "process_mem_max_rss": "236228", "process_out_blocks": "3520", "process_user_time": 4.431863}
+[0m00:34:59.986221 [debug] [MainThread]: Command `dbt run` succeeded at 00:34:59.986102 after 7.08 seconds
+[0m00:34:59.986666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef043225010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef0430723f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef045e74770>]}
+[0m00:34:59.987130 [debug] [MainThread]: Flushing usage events
+[0m00:35:01.470846 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:37:54.782916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cda1537d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cd9aab860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cd9d7e540>]}
+
+
+============================== 00:37:54.787686 | e5896a8d-38d5-4c54-8431-48729f10ce99 ==============================
+[0m00:37:54.787686 [info ] [MainThread]: Running with dbt=1.11.8
+[0m00:37:54.788561 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'version_check': 'True', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'log_format': 'default', 'introspect': 'True', 'write_json': 'True', 'target_path': 'None', 'fail_fast': 'False', 'debug': 'False', 'no_print': 'None', 'empty': 'False', 'indirect_selection': 'eager', 'profiles_dir': '/home/vishwajeet/.dbt', 'warn_error': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'partial_parse': 'True', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m00:37:55.943464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e5896a8d-38d5-4c54-8431-48729f10ce99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cd9a6dd30>]}
+[0m00:37:56.031127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e5896a8d-38d5-4c54-8431-48729f10ce99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cdc5348f0>]}
+[0m00:37:56.032039 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m00:37:56.222325 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m00:37:55.801818 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:37:55.802617 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/staging/stg_crypto.sql
+[0m00:37:56.136691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e5896a8d-38d5-4c54-8431-48729f10ce99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cb8fec710>]}
+[0m00:37:56.238650 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m00:37:56.241425 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m00:37:56.252802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e5896a8d-38d5-4c54-8431-48729f10ce99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cb8fed8e0>]}
+[0m00:37:56.253513 [info ] [MainThread]: Found 2 models, 1 source, 539 macros
+[0m00:37:56.253994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5896a8d-38d5-4c54-8431-48729f10ce99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cb9a7dd30>]}
+[0m00:37:56.256745 [info ] [MainThread]: 
+[0m00:37:56.257681 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m00:37:56.258163 [info ] [MainThread]: 
+[0m00:37:56.258825 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m00:37:56.260373 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m00:37:56.260975 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:37:57.046721 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m00:37:57.047365 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:37:57.724177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5896a8d-38d5-4c54-8431-48729f10ce99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cb9ec98e0>]}
+[0m00:37:57.725019 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:37:57.780934 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m00:37:57.781811 [info ] [Thread-1 (]: 1 of 1 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m00:37:57.782458 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m00:37:57.782979 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m00:37:57.791468 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m00:37:57.792757 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m00:37:57.833576 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m00:37:57.834901 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as int64) as coin_id,
+cast(symbol as string) as symbol,
+cast(market_cap as float64) as market_cap,
+cast(total_volume as float64) as total_volume,
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+
+timestamp_trunc(last_updated, hour, "UTC") as timestamp_hour,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m00:37:57.835692 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m00:37:58.730344 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:4fc5812d-6517-420c-a536-a7a1e29f9cb3&page=queryresults
+[0m00:37:59.558438 [debug] [Thread-1 (]: SQL status: OK in 0.827 seconds
+[0m00:37:59.620292 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e5896a8d-38d5-4c54-8431-48729f10ce99', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cda85bc80>]}
+[0m00:37:59.621213 [info ] [Thread-1 (]: 1 of 1 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 1.84s]
+[0m00:37:59.622038 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m00:37:59.624758 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:37:59.676996 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:37:59.677565 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_crypto' was properly closed.
+[0m00:37:59.677994 [info ] [MainThread]: 
+[0m00:37:59.678455 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.42 seconds (3.42s).
+[0m00:37:59.679398 [debug] [MainThread]: Command end result
+[0m00:37:59.738895 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m00:37:59.742273 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m00:37:59.749806 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m00:37:59.750361 [info ] [MainThread]: 
+[0m00:37:59.751002 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:37:59.751632 [info ] [MainThread]: 
+[0m00:37:59.752609 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m00:37:59.754340 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.696948, "process_in_blocks": "0", "process_kernel_time": 0.902618, "process_mem_max_rss": "237064", "process_out_blocks": "3520", "process_user_time": 4.477924}
+[0m00:37:59.755535 [debug] [MainThread]: Command `dbt run` succeeded at 00:37:59.755226 after 5.70 seconds
+[0m00:37:59.756406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cda812930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cd9a6d3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708cd9a6df40>]}
+[0m00:37:59.757341 [debug] [MainThread]: Flushing usage events
+[0m00:38:01.171570 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:38:47.633779 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d700d5223f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d700c5f5220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d700d5217f0>]}
+
+
+============================== 00:38:47.642218 | a30072e8-5622-45eb-aa1b-798b07f0e360 ==============================
+[0m00:38:47.642218 [info ] [MainThread]: Running with dbt=1.11.8
+[0m00:38:47.645497 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'log_format': 'default', 'fail_fast': 'False', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'printer_width': '80', 'debug': 'False', 'introspect': 'True', 'log_cache_events': 'False', 'profiles_dir': '/home/vishwajeet/.dbt', 'use_experimental_parser': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'write_json': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'partial_parse': 'True', 'static_parser': 'True'}
+[0m00:38:49.084045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a30072e8-5622-45eb-aa1b-798b07f0e360', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6ff0b01430>]}
+[0m00:38:49.185591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a30072e8-5622-45eb-aa1b-798b07f0e360', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6ff2565fa0>]}
+[0m00:38:49.186522 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m00:38:49.424041 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m00:38:49.669272 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:38:49.670101 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/staging/stg_crypto.sql
+[0m00:38:50.035510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a30072e8-5622-45eb-aa1b-798b07f0e360', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6ff01f0620>]}
+[0m00:38:50.141266 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m00:38:50.144938 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m00:38:50.156141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a30072e8-5622-45eb-aa1b-798b07f0e360', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6ff01f0bc0>]}
+[0m00:38:50.157463 [info ] [MainThread]: Found 2 models, 1 source, 539 macros
+[0m00:38:50.158215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a30072e8-5622-45eb-aa1b-798b07f0e360', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6ff01c66c0>]}
+[0m00:38:50.160672 [info ] [MainThread]: 
+[0m00:38:50.161396 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m00:38:50.161913 [info ] [MainThread]: 
+[0m00:38:50.162661 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m00:38:50.164438 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m00:38:50.165651 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:38:50.994026 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m00:38:50.995047 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:38:51.729156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a30072e8-5622-45eb-aa1b-798b07f0e360', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6ff01c4da0>]}
+[0m00:38:51.730128 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:38:51.788285 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m00:38:51.789281 [info ] [Thread-1 (]: 1 of 1 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m00:38:51.790079 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m00:38:51.790623 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m00:38:51.799627 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m00:38:51.801142 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m00:38:51.844268 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m00:38:51.845333 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as string) as coin_id,
+cast(symbol as string) as symbol,
+cast(market_cap as float64) as market_cap,
+cast(total_volume as float64) as total_volume,
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+
+timestamp_trunc(last_updated, hour, "UTC") as timestamp_hour,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m00:38:51.846016 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m00:38:52.790258 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:cd716e8e-9b7d-45ae-abcf-c2627fbc5cd5&page=queryresults
+[0m00:38:53.635070 [debug] [Thread-1 (]: SQL status: OK in 0.844 seconds
+[0m00:38:53.699561 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a30072e8-5622-45eb-aa1b-798b07f0e360', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d700d45bb00>]}
+[0m00:38:53.700724 [info ] [Thread-1 (]: 1 of 1 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 1.91s]
+[0m00:38:53.701752 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m00:38:53.704497 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:38:53.760709 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:38:53.761783 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_crypto' was properly closed.
+[0m00:38:53.762484 [info ] [MainThread]: 
+[0m00:38:53.763268 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.60 seconds (3.60s).
+[0m00:38:53.764592 [debug] [MainThread]: Command end result
+[0m00:38:53.815119 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m00:38:53.818763 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m00:38:53.826978 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m00:38:53.827688 [info ] [MainThread]: 
+[0m00:38:53.828418 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:38:53.829337 [info ] [MainThread]: 
+[0m00:38:53.830136 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m00:38:53.831584 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.3491344, "process_in_blocks": "0", "process_kernel_time": 0.851601, "process_mem_max_rss": "236908", "process_out_blocks": "3520", "process_user_time": 5.023273}
+[0m00:38:53.832826 [debug] [MainThread]: Command `dbt run` succeeded at 00:38:53.832575 after 6.35 seconds
+[0m00:38:53.833807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d700c62bb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d700e28a570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d700cd8e780>]}
+[0m00:38:53.834766 [debug] [MainThread]: Flushing usage events
+[0m00:38:55.305562 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:07:46.206806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d683218e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d683253a40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d683100200>]}
+
+
+============================== 01:07:46.213783 | 83409822-03ae-4125-b18f-96ec23a36b1c ==============================
+[0m01:07:46.213783 [info ] [MainThread]: Running with dbt=1.11.8
+[0m01:07:46.214530 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'debug': 'False', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'warn_error': 'None', 'indirect_selection': 'eager', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select stg_crypto.sql', 'log_cache_events': 'False', 'fail_fast': 'False', 'version_check': 'True', 'write_json': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'empty': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'profiles_dir': '/home/vishwajeet/.dbt', 'printer_width': '80', 'quiet': 'False', 'log_format': 'default', 'target_path': 'None'}
+[0m01:07:48.287151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '83409822-03ae-4125-b18f-96ec23a36b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d684d698b0>]}
+[0m01:07:48.362462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '83409822-03ae-4125-b18f-96ec23a36b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d662ac5a00>]}
+[0m01:07:48.363328 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m01:07:48.558437 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m01:07:48.850187 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 2 files changed.
+[0m01:07:48.850913 [debug] [MainThread]: Partial parsing: added file: crypto_pipeline://models/marts/agg_market_overview.sql
+[0m01:07:48.851719 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/staging/stg_crypto.sql
+[0m01:07:48.852402 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/marts/fact_crypto_metrics.sql
+[0m01:07:49.189425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '83409822-03ae-4125-b18f-96ec23a36b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d684c44680>]}
+[0m01:07:49.290072 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m01:07:49.293164 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m01:07:49.309667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '83409822-03ae-4125-b18f-96ec23a36b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d6618c2570>]}
+[0m01:07:49.310534 [info ] [MainThread]: Found 3 models, 1 source, 539 macros
+[0m01:07:49.311220 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '83409822-03ae-4125-b18f-96ec23a36b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d6836f0830>]}
+[0m01:07:49.313770 [info ] [MainThread]: 
+[0m01:07:49.314368 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m01:07:49.314829 [info ] [MainThread]: 
+[0m01:07:49.315527 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m01:07:49.317278 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m01:07:49.318208 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:07:50.152400 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m01:07:50.153385 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:07:50.860773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '83409822-03ae-4125-b18f-96ec23a36b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d6625e5340>]}
+[0m01:07:50.861574 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:07:50.918978 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m01:07:50.920176 [info ] [Thread-1 (]: 1 of 1 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m01:07:50.921186 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m01:07:50.921835 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m01:07:50.931061 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m01:07:50.932138 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m01:07:50.972719 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m01:07:50.973781 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as string) as coin_id,
+cast(name as string) as name,
+cast(symbol as string) as symbol,
+
+cast(market_cap as float64) as market_cap,
+cast(total_volume as float64) as total_volume,
+
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(circulating_supply as float64) as circulating_supply,
+
+timestamp_trunc(last_updated, hour, "UTC") as timestamp_hour,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m01:07:50.974432 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m01:07:51.857604 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:d50f7e42-ce03-48c6-9f28-b94000443efe&page=queryresults
+[0m01:07:52.714492 [debug] [Thread-1 (]: SQL status: OK in 0.856 seconds
+[0m01:07:52.788629 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83409822-03ae-4125-b18f-96ec23a36b1c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d6629876b0>]}
+[0m01:07:52.789619 [info ] [Thread-1 (]: 1 of 1 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 1.87s]
+[0m01:07:52.790494 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m01:07:52.793245 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:07:52.844889 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:07:52.845426 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_crypto' was properly closed.
+[0m01:07:52.845834 [info ] [MainThread]: 
+[0m01:07:52.846298 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.53 seconds (3.53s).
+[0m01:07:52.847185 [debug] [MainThread]: Command end result
+[0m01:07:52.887800 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m01:07:52.890780 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m01:07:52.898525 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m01:07:52.899136 [info ] [MainThread]: 
+[0m01:07:52.899752 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m01:07:52.900297 [info ] [MainThread]: 
+[0m01:07:52.900857 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m01:07:52.901964 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.766288, "process_in_blocks": "276960", "process_kernel_time": 1.186112, "process_mem_max_rss": "236080", "process_out_blocks": "3552", "process_user_time": 4.585241}
+[0m01:07:52.902705 [debug] [MainThread]: Command `dbt run` succeeded at 01:07:52.902532 after 6.77 seconds
+[0m01:07:52.903431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d68243dd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d662f9dd30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71d6626470b0>]}
+[0m01:07:52.904272 [debug] [MainThread]: Flushing usage events
+[0m01:07:54.381085 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:45:44.011541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0e07763d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0e077607a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0e07760950>]}
+
+
+============================== 02:45:44.020601 | e3d1ea6d-b459-4701-ac56-2f047bfc7808 ==============================
+[0m02:45:44.020601 [info ] [MainThread]: Running with dbt=1.11.8
+[0m02:45:44.021418 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'use_colors': 'True', 'write_json': 'True', 'introspect': 'True', 'profiles_dir': '/home/vishwajeet/.dbt', 'empty': 'False', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'cache_selected_only': 'False', 'quiet': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'debug': 'False', 'use_experimental_parser': 'False', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'partial_parse': 'True', 'no_print': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'invocation_command': 'dbt run --select stg_crypto.sql', 'warn_error': 'None'}
+[0m02:45:46.159601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e3d1ea6d-b459-4701-ac56-2f047bfc7808', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0e092fd640>]}
+[0m02:45:46.245535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e3d1ea6d-b459-4701-ac56-2f047bfc7808', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0de75d51c0>]}
+[0m02:45:46.246467 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m02:45:46.472463 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m02:45:46.767183 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m02:45:46.768334 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/staging/src_crypto.yml
+[0m02:45:46.768935 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/marts/agg_market_overview.sql
+[0m02:45:46.769390 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/staging/stg_crypto.sql
+[0m02:45:47.255919 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e3d1ea6d-b459-4701-ac56-2f047bfc7808', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0de5ca75f0>]}
+[0m02:45:47.342585 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m02:45:47.345589 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m02:45:47.361536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e3d1ea6d-b459-4701-ac56-2f047bfc7808', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0de5c640b0>]}
+[0m02:45:47.362407 [info ] [MainThread]: Found 3 models, 1 source, 539 macros
+[0m02:45:47.363202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e3d1ea6d-b459-4701-ac56-2f047bfc7808', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0e07cc4d70>]}
+[0m02:45:47.365695 [info ] [MainThread]: 
+[0m02:45:47.366292 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m02:45:47.366786 [info ] [MainThread]: 
+[0m02:45:47.367457 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:45:47.369099 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m02:45:47.370597 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:45:48.198168 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m02:45:48.199290 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:45:48.864101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e3d1ea6d-b459-4701-ac56-2f047bfc7808', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0de7599100>]}
+[0m02:45:48.864952 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:45:48.922564 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m02:45:48.923736 [info ] [Thread-1 (]: 1 of 1 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m02:45:48.924677 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m02:45:48.925508 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m02:45:48.934350 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m02:45:48.935649 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m02:45:48.977582 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m02:45:48.978760 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as string) as coin_id,
+cast(name as string) as name,
+cast(symbol as string) as symbol,
+
+cast(market_cap as float64) as market_cap,
+cast(market_cap_rank as int) as market_cap_rank,
+cast(total_volume as float64) as total_volume,
+
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(circulating_supply as float64) as circulating_supply,
+
+timestamp_trunc(last_updated, hour, "UTC") as timestamp_hour,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m02:45:48.979795 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:45:49.888435 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:cc257eff-a7f9-4353-aa4c-384c74ec11f0&page=queryresults
+[0m02:45:50.701557 [debug] [Thread-1 (]: SQL status: OK in 0.812 seconds
+[0m02:45:50.769579 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e3d1ea6d-b459-4701-ac56-2f047bfc7808', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0de6d07dd0>]}
+[0m02:45:50.770589 [info ] [Thread-1 (]: 1 of 1 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 1.84s]
+[0m02:45:50.771810 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m02:45:50.774810 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:45:50.835688 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:45:50.836263 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_crypto' was properly closed.
+[0m02:45:50.836730 [info ] [MainThread]: 
+[0m02:45:50.837291 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.47 seconds (3.47s).
+[0m02:45:50.838669 [debug] [MainThread]: Command end result
+[0m02:45:50.881609 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m02:45:50.884053 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m02:45:50.890648 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m02:45:50.891257 [info ] [MainThread]: 
+[0m02:45:50.892381 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:45:50.893186 [info ] [MainThread]: 
+[0m02:45:50.893925 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m02:45:50.894776 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.9585752, "process_in_blocks": "293688", "process_kernel_time": 1.36144, "process_mem_max_rss": "238012", "process_out_blocks": "3544", "process_user_time": 4.913887}
+[0m02:45:50.895348 [debug] [MainThread]: Command `dbt run` succeeded at 02:45:50.895228 after 6.96 seconds
+[0m02:45:50.895802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0e07642330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0e09069dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0e070aa9f0>]}
+[0m02:45:50.896246 [debug] [MainThread]: Flushing usage events
+[0m02:45:52.454144 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:49:46.812218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a344753f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a34482e390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a344cb4080>]}
+
+
+============================== 02:49:46.818776 | 84319df7-770d-4458-92b9-af75cf7744a9 ==============================
+[0m02:49:46.818776 [info ] [MainThread]: Running with dbt=1.11.8
+[0m02:49:46.820083 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'profiles_dir': '/home/vishwajeet/.dbt', 'debug': 'False', 'introspect': 'True', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'static_parser': 'True', 'empty': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'quiet': 'False', 'write_json': 'True', 'invocation_command': 'dbt run --select stg_crypto.sql', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'warn_error': 'None', 'indirect_selection': 'eager', 'log_format': 'default', 'partial_parse': 'True', 'use_experimental_parser': 'False'}
+[0m02:49:48.352705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '84319df7-770d-4458-92b9-af75cf7744a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a323d059a0>]}
+[0m02:49:48.458803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '84319df7-770d-4458-92b9-af75cf7744a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a346240b00>]}
+[0m02:49:48.459712 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m02:49:48.666162 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m02:49:48.917493 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m02:49:48.918304 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/staging/stg_crypto.sql
+[0m02:49:49.281391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '84319df7-770d-4458-92b9-af75cf7744a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a3239db920>]}
+[0m02:49:49.405065 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m02:49:49.408232 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m02:49:49.421119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '84319df7-770d-4458-92b9-af75cf7744a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a3238c4560>]}
+[0m02:49:49.421771 [info ] [MainThread]: Found 3 models, 1 source, 539 macros
+[0m02:49:49.422736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84319df7-770d-4458-92b9-af75cf7744a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a3238b6900>]}
+[0m02:49:49.425374 [info ] [MainThread]: 
+[0m02:49:49.426026 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m02:49:49.426522 [info ] [MainThread]: 
+[0m02:49:49.427203 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:49:49.428884 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m02:49:49.430092 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:49:50.183996 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m02:49:50.184639 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:49:50.887211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84319df7-770d-4458-92b9-af75cf7744a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a34381ca40>]}
+[0m02:49:50.888156 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:49:50.948253 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m02:49:50.949579 [info ] [Thread-1 (]: 1 of 1 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m02:49:50.950806 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m02:49:50.951610 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m02:49:50.961066 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m02:49:50.962168 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m02:49:51.005502 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m02:49:51.006594 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as string) as coin_id,
+cast(name as string) as name,
+cast(symbol as string) as symbol,
+cast(current_price as float64) as current_price,
+
+cast(market_cap as float64) as market_cap,
+cast(market_cap_rank as int) as market_cap_rank,
+cast(total_volume as float64) as total_volume,
+
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(circulating_supply as float64) as circulating_supply,
+
+timestamp_trunc(last_updated, hour, "UTC") as timestamp_hour,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m02:49:51.007367 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:49:51.982547 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:aab4f055-31af-4f80-a4da-93778c9cbb9c&page=queryresults
+[0m02:49:52.788942 [debug] [Thread-1 (]: SQL status: OK in 0.806 seconds
+[0m02:49:52.844732 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84319df7-770d-4458-92b9-af75cf7744a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a34476bbc0>]}
+[0m02:49:52.845664 [info ] [Thread-1 (]: 1 of 1 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 1.89s]
+[0m02:49:52.846557 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m02:49:52.849324 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:49:52.902526 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:49:52.903395 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_crypto' was properly closed.
+[0m02:49:52.904067 [info ] [MainThread]: 
+[0m02:49:52.904673 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.48 seconds (3.48s).
+[0m02:49:52.905554 [debug] [MainThread]: Command end result
+[0m02:49:52.944290 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m02:49:52.947306 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m02:49:52.954269 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m02:49:52.954847 [info ] [MainThread]: 
+[0m02:49:52.955467 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:49:52.955971 [info ] [MainThread]: 
+[0m02:49:52.956609 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m02:49:52.957444 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.22696, "process_in_blocks": "0", "process_kernel_time": 1.000879, "process_mem_max_rss": "236772", "process_out_blocks": "3544", "process_user_time": 5.118224}
+[0m02:49:52.958011 [debug] [MainThread]: Command `dbt run` succeeded at 02:49:52.957896 after 6.23 seconds
+[0m02:49:52.958474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a343d05f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a343d32c00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a34479c5c0>]}
+[0m02:49:52.958913 [debug] [MainThread]: Flushing usage events
+[0m02:49:54.518679 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:53:05.864546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76082cb5ffe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76082b963620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76082b6e3830>]}
+
+
+============================== 02:53:05.869580 | 0138e9ce-58d2-4735-9a65-442cafe82676 ==============================
+[0m02:53:05.869580 [info ] [MainThread]: Running with dbt=1.11.8
+[0m02:53:05.870393 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'partial_parse': 'True', 'target_path': 'None', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'printer_width': '80', 'use_colors': 'True', 'cache_selected_only': 'False', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'no_print': 'None', 'write_json': 'True', 'profiles_dir': '/home/vishwajeet/.dbt', 'version_check': 'True', 'warn_error': 'None', 'invocation_command': 'dbt run --select stg_crypto.sql', 'quiet': 'False'}
+[0m02:53:07.083998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0138e9ce-58d2-4735-9a65-442cafe82676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76082da65580>]}
+[0m02:53:07.164943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0138e9ce-58d2-4735-9a65-442cafe82676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76080bee56a0>]}
+[0m02:53:07.165939 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m02:53:07.394718 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m02:53:07.709974 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 0 files changed.
+[0m02:53:07.710658 [debug] [MainThread]: Partial parsing: added file: crypto_pipeline://models/marts/fact_crypto_hourly.sql
+[0m02:53:07.711050 [debug] [MainThread]: Partial parsing: deleted file: crypto_pipeline://models/marts/fact_crypto_metrics.sql
+[0m02:53:08.046484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0138e9ce-58d2-4735-9a65-442cafe82676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76080affac60>]}
+[0m02:53:08.136664 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m02:53:08.139188 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m02:53:08.148367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0138e9ce-58d2-4735-9a65-442cafe82676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76080afc4170>]}
+[0m02:53:08.149065 [info ] [MainThread]: Found 3 models, 1 source, 539 macros
+[0m02:53:08.149546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0138e9ce-58d2-4735-9a65-442cafe82676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76080afa67e0>]}
+[0m02:53:08.151726 [info ] [MainThread]: 
+[0m02:53:08.152307 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m02:53:08.152793 [info ] [MainThread]: 
+[0m02:53:08.153449 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:53:08.154767 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m02:53:08.155516 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:53:08.946687 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m02:53:08.947378 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:53:09.648244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0138e9ce-58d2-4735-9a65-442cafe82676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76080b06c0b0>]}
+[0m02:53:09.649088 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:53:09.707139 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m02:53:09.708009 [info ] [Thread-1 (]: 1 of 1 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m02:53:09.708714 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m02:53:09.709228 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m02:53:09.717747 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m02:53:09.719030 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m02:53:09.759410 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m02:53:09.760516 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as string) as coin_id,
+cast(name as string) as name,
+cast(symbol as string) as symbol,
+cast(current_price as float64) as current_price,
+
+cast(market_cap as float64) as market_cap,
+cast(market_cap_rank as int) as market_cap_rank,
+cast(total_volume as float64) as total_volume,
+
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(circulating_supply as float64) as circulating_supply,
+
+timestamp_trunc(last_updated, hour, "UTC") as timestamp_hour,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m02:53:09.761268 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:53:10.723425 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:26163164-6f91-4bab-8b65-653aedf8acd9&page=queryresults
+[0m02:53:11.527884 [debug] [Thread-1 (]: SQL status: OK in 0.804 seconds
+[0m02:53:11.585650 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0138e9ce-58d2-4735-9a65-442cafe82676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76082be639b0>]}
+[0m02:53:11.586602 [info ] [Thread-1 (]: 1 of 1 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 1.88s]
+[0m02:53:11.587488 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m02:53:11.590667 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:53:11.645273 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:53:11.645829 [debug] [MainThread]: Connection 'model.crypto_pipeline.stg_crypto' was properly closed.
+[0m02:53:11.646329 [info ] [MainThread]: 
+[0m02:53:11.646881 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.49 seconds (3.49s).
+[0m02:53:11.647792 [debug] [MainThread]: Command end result
+[0m02:53:11.690486 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m02:53:11.693051 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m02:53:11.700121 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m02:53:11.700697 [info ] [MainThread]: 
+[0m02:53:11.701322 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:53:11.701823 [info ] [MainThread]: 
+[0m02:53:11.702346 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m02:53:11.703159 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.9150715, "process_in_blocks": "0", "process_kernel_time": 0.850679, "process_mem_max_rss": "236796", "process_out_blocks": "3552", "process_user_time": 4.536959}
+[0m02:53:11.703800 [debug] [MainThread]: Command `dbt run` succeeded at 02:53:11.703664 after 5.92 seconds
+[0m02:53:11.704265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76082b4c2300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76080862f950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76082ae88380>]}
+[0m02:53:11.704884 [debug] [MainThread]: Flushing usage events
+[0m02:53:12.999114 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:21:01.883371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72133e54bdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72133caf83e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72133cafa990>]}
+
+
+============================== 03:21:01.892720 | 7f452065-64ff-409a-92fa-917b2b8bda75 ==============================
+[0m03:21:01.892720 [info ] [MainThread]: Running with dbt=1.11.8
+[0m03:21:01.893571 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'use_colors': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'profiles_dir': '/home/vishwajeet/.dbt', 'use_experimental_parser': 'False', 'static_parser': 'True', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'introspect': 'True', 'debug': 'False', 'fail_fast': 'False', 'printer_width': '80', 'warn_error': 'None', 'indirect_selection': 'eager', 'quiet': 'False', 'log_cache_events': 'False', 'version_check': 'True', 'write_json': 'True'}
+[0m03:21:03.974828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7f452065-64ff-409a-92fa-917b2b8bda75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7213208563f0>]}
+[0m03:21:04.054573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7f452065-64ff-409a-92fa-917b2b8bda75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72132024b920>]}
+[0m03:21:04.056240 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m03:21:04.262033 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m03:21:04.563243 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 1 files changed.
+[0m03:21:04.564013 [debug] [MainThread]: Partial parsing: added file: crypto_pipeline://models/marts/fact_crypto_metrics.sql
+[0m03:21:04.564534 [debug] [MainThread]: Partial parsing: deleted file: crypto_pipeline://models/marts/fact_crypto_hourly.sql
+[0m03:21:04.565134 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/marts/agg_market_overview.sql
+[0m03:21:04.912464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7f452065-64ff-409a-92fa-917b2b8bda75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72131b9e7230>]}
+[0m03:21:05.003600 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m03:21:05.008117 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m03:21:05.025232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7f452065-64ff-409a-92fa-917b2b8bda75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72131b9b4440>]}
+[0m03:21:05.026115 [info ] [MainThread]: Found 3 models, 1 source, 539 macros
+[0m03:21:05.026776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7f452065-64ff-409a-92fa-917b2b8bda75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72131b996810>]}
+[0m03:21:05.029293 [info ] [MainThread]: 
+[0m03:21:05.029909 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m03:21:05.030347 [info ] [MainThread]: 
+[0m03:21:05.031097 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:21:05.036777 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m03:21:05.037586 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:21:05.891899 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m03:21:05.892761 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:21:06.606630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7f452065-64ff-409a-92fa-917b2b8bda75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72133e538da0>]}
+[0m03:21:06.607760 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:21:06.667301 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m03:21:06.668196 [info ] [Thread-1 (]: 1 of 3 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m03:21:06.668876 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m03:21:06.669370 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m03:21:06.679841 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m03:21:06.680925 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m03:21:06.721854 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m03:21:06.722919 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as string) as coin_id,
+cast(name as string) as name,
+cast(symbol as string) as symbol,
+cast(current_price as float64) as current_price,
+
+cast(market_cap as float64) as market_cap,
+cast(market_cap_rank as int) as market_cap_rank,
+cast(total_volume as float64) as total_volume,
+
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(circulating_supply as float64) as circulating_supply,
+
+timestamp_trunc(last_updated, hour, "UTC") as timestamp_hour,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m03:21:06.723649 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m03:21:07.651433 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:b00fe069-36c0-456d-a5db-639aa231904c&page=queryresults
+[0m03:21:08.471468 [debug] [Thread-1 (]: SQL status: OK in 0.819 seconds
+[0m03:21:08.560692 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7f452065-64ff-409a-92fa-917b2b8bda75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72133c90f9e0>]}
+[0m03:21:08.561970 [info ] [Thread-1 (]: 1 of 3 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 1.89s]
+[0m03:21:08.563392 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m03:21:08.565082 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.fact_crypto_metrics
+[0m03:21:08.565972 [info ] [Thread-3 (]: 2 of 3 START sql table model crypto_project1.fact_crypto_metrics ............... [RUN]
+[0m03:21:08.567430 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.crypto_pipeline.fact_crypto_metrics'
+[0m03:21:08.568010 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.fact_crypto_metrics
+[0m03:21:08.574286 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.fact_crypto_metrics"
+[0m03:21:08.578466 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.fact_crypto_metrics
+[0m03:21:08.622756 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.fact_crypto_metrics"
+[0m03:21:08.625048 [debug] [Thread-3 (]: On model.crypto_pipeline.fact_crypto_metrics: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.fact_crypto_metrics"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`fact_crypto_metrics`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+    coin_id,
+    name,
+    symbol,
+
+    current_price,
+    market_cap,
+    total_volume,
+    price_change_percentage_24h
+
+from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+    );
+  
+[0m03:21:08.625762 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m03:21:09.671449 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:52306e11-8b4e-4457-996c-d1014eef99b4&page=queryresults
+[0m03:21:11.708720 [debug] [Thread-3 (]: SQL status: OK in 2.036 seconds
+[0m03:21:12.127340 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7f452065-64ff-409a-92fa-917b2b8bda75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72131ba833b0>]}
+[0m03:21:12.128732 [info ] [Thread-3 (]: 2 of 3 OK created sql table model crypto_project1.fact_crypto_metrics .......... [[32mCREATE TABLE (891.0 rows, 62.1 KiB processed)[0m in 3.56s]
+[0m03:21:12.130157 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.fact_crypto_metrics
+[0m03:21:12.131822 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.agg_market_overview
+[0m03:21:12.133243 [info ] [Thread-1 (]: 3 of 3 START sql table model crypto_project1.agg_market_overview ............... [RUN]
+[0m03:21:12.135046 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.crypto_pipeline.stg_crypto, now model.crypto_pipeline.agg_market_overview)
+[0m03:21:12.135799 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.agg_market_overview
+[0m03:21:12.141694 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.agg_market_overview"
+[0m03:21:12.143669 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.agg_market_overview
+[0m03:21:12.152097 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.agg_market_overview"
+[0m03:21:12.153433 [debug] [Thread-1 (]: On model.crypto_pipeline.agg_market_overview: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.agg_market_overview"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`agg_market_overview`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+
+    sum(market_cap) as total_market_cap,
+    sum(total_volume) as total_volume,
+    avg(current_price) as avg_price,
+    avg(price_change_percentage_24h) as avg_price_change_24h
+
+from `dtc-course-486211`.`crypto_project1`.`fact_crypto_metrics`
+
+group by timestamp_hour
+    );
+  
+[0m03:21:12.154362 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m03:21:13.118232 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:a0ec8013-43db-42c1-bb75-7c0a12889560&page=queryresults
+[0m03:21:17.864050 [debug] [Thread-1 (]: SQL status: OK in 4.745 seconds
+[0m03:21:18.278691 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7f452065-64ff-409a-92fa-917b2b8bda75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7213183e4530>]}
+[0m03:21:18.279866 [info ] [Thread-1 (]: 3 of 3 OK created sql table model crypto_project1.agg_market_overview .......... [[32mCREATE TABLE (3.0 rows, 34.8 KiB processed)[0m in 6.14s]
+[0m03:21:18.280908 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.agg_market_overview
+[0m03:21:18.283912 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:21:18.342923 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:21:18.343430 [debug] [MainThread]: Connection 'model.crypto_pipeline.agg_market_overview' was properly closed.
+[0m03:21:18.343773 [debug] [MainThread]: Connection 'model.crypto_pipeline.fact_crypto_metrics' was properly closed.
+[0m03:21:18.344233 [info ] [MainThread]: 
+[0m03:21:18.344705 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 13.31 seconds (13.31s).
+[0m03:21:18.345898 [debug] [MainThread]: Command end result
+[0m03:21:18.390699 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m03:21:18.394209 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m03:21:18.403307 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m03:21:18.403838 [info ] [MainThread]: 
+[0m03:21:18.404390 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:21:18.404903 [info ] [MainThread]: 
+[0m03:21:18.405696 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m03:21:18.407126 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 16.594965, "process_in_blocks": "295352", "process_kernel_time": 1.196269, "process_mem_max_rss": "238024", "process_out_blocks": "3576", "process_user_time": 4.831384}
+[0m03:21:18.408314 [debug] [MainThread]: Command `dbt run` succeeded at 03:21:18.408092 after 16.60 seconds
+[0m03:21:18.408936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72133d6fcbc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72133cd9c860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721318365e20>]}
+[0m03:21:18.409445 [debug] [MainThread]: Flushing usage events
+[0m03:21:20.330748 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:54:56.703674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7762368fe6f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776236952390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776236a87980>]}
+
+
+============================== 03:54:56.712432 | d63a7f1f-d526-40ef-89be-193121a2aa2b ==============================
+[0m03:54:56.712432 [info ] [MainThread]: Running with dbt=1.11.8
+[0m03:54:56.713385 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'printer_width': '80', 'introspect': 'True', 'profiles_dir': '/home/vishwajeet/.dbt', 'partial_parse': 'True', 'quiet': 'False', 'cache_selected_only': 'False', 'empty': 'False', 'target_path': 'None', 'log_format': 'default', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'warn_error': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'indirect_selection': 'eager', 'version_check': 'True', 'debug': 'False', 'write_json': 'True', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs'}
+[0m03:54:58.740154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd63a7f1f-d526-40ef-89be-193121a2aa2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7762161b51c0>]}
+[0m03:54:58.821651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd63a7f1f-d526-40ef-89be-193121a2aa2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776216bfde80>]}
+[0m03:54:58.823297 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m03:54:59.031298 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m03:54:59.326030 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m03:54:59.326753 [debug] [MainThread]: Partial parsing: added file: crypto_pipeline://models/marts/top_10_market_overview.sql
+[0m03:54:59.327246 [debug] [MainThread]: Partial parsing: added file: crypto_pipeline://models/marts/top_10_crypto.sql
+[0m03:54:59.653253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd63a7f1f-d526-40ef-89be-193121a2aa2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7762162e97f0>]}
+[0m03:54:59.753268 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m03:54:59.756935 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m03:54:59.772709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd63a7f1f-d526-40ef-89be-193121a2aa2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776215bc1040>]}
+[0m03:54:59.773443 [info ] [MainThread]: Found 5 models, 1 source, 539 macros
+[0m03:54:59.773971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd63a7f1f-d526-40ef-89be-193121a2aa2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776215baa0c0>]}
+[0m03:54:59.776530 [info ] [MainThread]: 
+[0m03:54:59.777173 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m03:54:59.777636 [info ] [MainThread]: 
+[0m03:54:59.778298 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:54:59.784428 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m03:54:59.785096 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:55:00.614098 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m03:55:00.614914 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m03:55:01.303998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd63a7f1f-d526-40ef-89be-193121a2aa2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776236e20ad0>]}
+[0m03:55:01.304774 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:55:01.363853 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m03:55:01.364802 [info ] [Thread-1 (]: 1 of 5 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m03:55:01.365510 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m03:55:01.366009 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m03:55:01.375991 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m03:55:01.377551 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m03:55:01.423664 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m03:55:01.425176 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as string) as coin_id,
+cast(name as string) as name,
+cast(symbol as string) as symbol,
+cast(current_price as float64) as current_price,
+
+cast(market_cap as float64) as market_cap,
+cast(market_cap_rank as int) as market_cap_rank,
+cast(total_volume as float64) as total_volume,
+
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(circulating_supply as float64) as circulating_supply,
+
+timestamp_trunc(last_updated, hour, "UTC") as timestamp_hour,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m03:55:01.425926 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m03:55:02.631804 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:fcf4bcb5-e664-48ab-b7f7-d4609b5f4d9b&page=queryresults
+[0m03:55:03.480043 [debug] [Thread-1 (]: SQL status: OK in 0.847 seconds
+[0m03:55:03.555197 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd63a7f1f-d526-40ef-89be-193121a2aa2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776236a87ad0>]}
+[0m03:55:03.556243 [info ] [Thread-1 (]: 1 of 5 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 2.19s]
+[0m03:55:03.557099 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m03:55:03.558955 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.fact_crypto_metrics
+[0m03:55:03.559847 [debug] [Thread-2 (]: Began running node model.crypto_pipeline.top_10_crypto
+[0m03:55:03.561618 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.top_10_market_overview
+[0m03:55:03.560755 [info ] [Thread-3 (]: 2 of 5 START sql table model crypto_project1.fact_crypto_metrics ............... [RUN]
+[0m03:55:03.563250 [info ] [Thread-2 (]: 3 of 5 START sql table model crypto_project1.top_10_crypto ..................... [RUN]
+[0m03:55:03.565090 [info ] [Thread-1 (]: 4 of 5 START sql table model crypto_project1.top_10_market_overview ............ [RUN]
+[0m03:55:03.566994 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.crypto_pipeline.fact_crypto_metrics'
+[0m03:55:03.568798 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.crypto_pipeline.top_10_crypto'
+[0m03:55:03.569844 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.crypto_pipeline.stg_crypto, now model.crypto_pipeline.top_10_market_overview)
+[0m03:55:03.570652 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.fact_crypto_metrics
+[0m03:55:03.571693 [debug] [Thread-2 (]: Began compiling node model.crypto_pipeline.top_10_crypto
+[0m03:55:03.572963 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.top_10_market_overview
+[0m03:55:03.577308 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.fact_crypto_metrics"
+[0m03:55:03.581387 [debug] [Thread-2 (]: Writing injected SQL for node "model.crypto_pipeline.top_10_crypto"
+[0m03:55:03.588017 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.top_10_market_overview"
+[0m03:55:03.590049 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.fact_crypto_metrics
+[0m03:55:03.597177 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.top_10_market_overview
+[0m03:55:03.613203 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m03:55:03.625218 [debug] [Thread-2 (]: Began executing node model.crypto_pipeline.top_10_crypto
+[0m03:55:03.668519 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.top_10_market_overview"
+[0m03:55:03.667051 [debug] [Thread-2 (]: Writing runtime sql for node "model.crypto_pipeline.top_10_crypto"
+[0m03:55:03.724017 [debug] [Thread-1 (]: On model.crypto_pipeline.top_10_market_overview: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.top_10_market_overview"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`top_10_market_overview`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+
+    sum(market_cap) as top_10_market_cap,
+    sum(total_volume) as top_10_volume
+
+from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+
+where market_cap_rank <= 10
+
+group by timestamp_hour
+    );
+  
+[0m03:55:03.725143 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m03:55:03.725881 [debug] [Thread-2 (]: On model.crypto_pipeline.top_10_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.top_10_crypto"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`top_10_crypto`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+    coin_id,
+    name,
+    symbol,
+
+    current_price,
+    market_cap,
+    total_volume,
+    price_change_percentage_24h,
+    market_cap_rank
+
+from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+
+where market_cap_rank <= 10
+    );
+  
+[0m03:55:03.726732 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m03:55:04.462388 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.fact_crypto_metrics"
+[0m03:55:04.463684 [debug] [Thread-3 (]: On model.crypto_pipeline.fact_crypto_metrics: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.fact_crypto_metrics"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`fact_crypto_metrics`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+    coin_id,
+    name,
+    symbol,
+
+    current_price,
+    market_cap,
+    total_volume,
+    price_change_percentage_24h
+
+from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+    );
+  
+[0m03:55:04.878392 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:59e2967c-f764-43bf-b49b-e6124a86dd53&page=queryresults
+[0m03:55:04.912150 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:21c52206-69ad-4bba-903e-0c5235c1f15c&page=queryresults
+[0m03:55:05.279558 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:c158c7ac-cf96-4257-b05d-367211a07901&page=queryresults
+[0m03:55:06.976381 [debug] [Thread-1 (]: SQL status: OK in 2.097 seconds
+[0m03:55:07.328794 [debug] [Thread-3 (]: SQL status: OK in 2.048 seconds
+[0m03:55:07.382859 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd63a7f1f-d526-40ef-89be-193121a2aa2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77621444a780>]}
+[0m03:55:07.384030 [info ] [Thread-1 (]: 4 of 5 OK created sql table model crypto_project1.top_10_market_overview ....... [[32mCREATE TABLE (4.0 rows, 37.2 KiB processed)[0m in 3.81s]
+[0m03:55:07.385022 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.top_10_market_overview
+[0m03:55:07.506450 [debug] [Thread-2 (]: SQL status: OK in 2.594 seconds
+[0m03:55:07.759015 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd63a7f1f-d526-40ef-89be-193121a2aa2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776214420830>]}
+[0m03:55:07.760170 [info ] [Thread-3 (]: 2 of 5 OK created sql table model crypto_project1.fact_crypto_metrics .......... [[32mCREATE TABLE (1.2k rows, 82.9 KiB processed)[0m in 4.19s]
+[0m03:55:07.760951 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.fact_crypto_metrics
+[0m03:55:07.762410 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.agg_market_overview
+[0m03:55:07.763585 [info ] [Thread-1 (]: 5 of 5 START sql table model crypto_project1.agg_market_overview ............... [RUN]
+[0m03:55:07.764657 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.crypto_pipeline.top_10_market_overview, now model.crypto_pipeline.agg_market_overview)
+[0m03:55:07.765365 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.agg_market_overview
+[0m03:55:07.770331 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.agg_market_overview"
+[0m03:55:07.771607 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.agg_market_overview
+[0m03:55:07.774740 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m03:55:07.938798 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd63a7f1f-d526-40ef-89be-193121a2aa2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776214463cb0>]}
+[0m03:55:07.939960 [info ] [Thread-2 (]: 3 of 5 OK created sql table model crypto_project1.top_10_crypto ................ [[32mCREATE TABLE (40.0 rows, 92.2 KiB processed)[0m in 4.37s]
+[0m03:55:07.940804 [debug] [Thread-2 (]: Finished running node model.crypto_pipeline.top_10_crypto
+[0m03:55:08.426423 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.agg_market_overview"
+[0m03:55:08.427880 [debug] [Thread-1 (]: On model.crypto_pipeline.agg_market_overview: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.agg_market_overview"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`agg_market_overview`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+
+    sum(market_cap) as total_market_cap,
+    sum(total_volume) as total_volume,
+    avg(current_price) as avg_price,
+    avg(price_change_percentage_24h) as avg_price_change_24h
+
+from `dtc-course-486211`.`crypto_project1`.`fact_crypto_metrics`
+
+group by timestamp_hour
+    );
+  
+[0m03:55:09.113740 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:2653aa36-5850-446e-b9ed-ed887d89edfc&page=queryresults
+[0m03:55:11.692899 [debug] [Thread-1 (]: SQL status: OK in 2.578 seconds
+[0m03:55:12.114540 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd63a7f1f-d526-40ef-89be-193121a2aa2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7762144130e0>]}
+[0m03:55:12.115751 [info ] [Thread-1 (]: 5 of 5 OK created sql table model crypto_project1.agg_market_overview .......... [[32mCREATE TABLE (5.0 rows, 46.4 KiB processed)[0m in 4.35s]
+[0m03:55:12.116572 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.agg_market_overview
+[0m03:55:12.119584 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:55:12.173072 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:55:12.173627 [debug] [MainThread]: Connection 'model.crypto_pipeline.agg_market_overview' was properly closed.
+[0m03:55:12.173985 [debug] [MainThread]: Connection 'model.crypto_pipeline.fact_crypto_metrics' was properly closed.
+[0m03:55:12.174317 [debug] [MainThread]: Connection 'model.crypto_pipeline.top_10_crypto' was properly closed.
+[0m03:55:12.174838 [info ] [MainThread]: 
+[0m03:55:12.175324 [info ] [MainThread]: Finished running 4 table models, 1 view model in 0 hours 0 minutes and 12.40 seconds (12.40s).
+[0m03:55:12.177442 [debug] [MainThread]: Command end result
+[0m03:55:12.219584 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m03:55:12.222136 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m03:55:12.229023 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m03:55:12.229575 [info ] [MainThread]: 
+[0m03:55:12.230101 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:55:12.230572 [info ] [MainThread]: 
+[0m03:55:12.231112 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m03:55:12.231900 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 15.602171, "process_in_blocks": "293872", "process_kernel_time": 1.349844, "process_mem_max_rss": "240652", "process_out_blocks": "3656", "process_user_time": 4.941536}
+[0m03:55:12.232493 [debug] [MainThread]: Command `dbt run` succeeded at 03:55:12.232374 after 15.60 seconds
+[0m03:55:12.232924 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776238824290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776216243500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77623637f440>]}
+[0m03:55:12.233359 [debug] [MainThread]: Flushing usage events
+[0m03:55:14.044216 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:15:21.067332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f57e2002f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f57c35e390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f57b50b0e0>]}
+
+
+============================== 04:15:21.079476 | 481bfcf8-4e6b-4715-9042-49fc428bd220 ==============================
+[0m04:15:21.079476 [info ] [MainThread]: Running with dbt=1.11.8
+[0m04:15:21.080562 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'printer_width': '80', 'invocation_command': 'dbt run', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'profiles_dir': '/home/vishwajeet/.dbt', 'cache_selected_only': 'False', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'use_colors': 'True', 'warn_error': 'None', 'log_format': 'default', 'log_cache_events': 'False', 'version_check': 'True', 'quiet': 'False', 'empty': 'False', 'write_json': 'True', 'debug': 'False', 'partial_parse': 'True'}
+[0m04:15:23.563101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '481bfcf8-4e6b-4715-9042-49fc428bd220', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f55baa90d0>]}
+[0m04:15:23.651196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '481bfcf8-4e6b-4715-9042-49fc428bd220', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f57bcdc9e0>]}
+[0m04:15:23.652167 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m04:15:23.887499 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m04:15:24.235670 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m04:15:24.236671 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/marts/top_10_crypto.sql
+[0m04:15:24.652836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '481bfcf8-4e6b-4715-9042-49fc428bd220', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f55b585280>]}
+[0m04:15:24.765362 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m04:15:24.768416 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m04:15:24.788466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '481bfcf8-4e6b-4715-9042-49fc428bd220', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f55b4c0cb0>]}
+[0m04:15:24.789486 [info ] [MainThread]: Found 5 models, 1 source, 539 macros
+[0m04:15:24.790213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '481bfcf8-4e6b-4715-9042-49fc428bd220', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f5621be540>]}
+[0m04:15:24.793755 [info ] [MainThread]: 
+[0m04:15:24.794537 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m04:15:24.795184 [info ] [MainThread]: 
+[0m04:15:24.796159 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m04:15:24.804011 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m04:15:24.805055 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:15:25.621546 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m04:15:25.622559 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:15:26.294285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '481bfcf8-4e6b-4715-9042-49fc428bd220', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f55bba77d0>]}
+[0m04:15:26.294919 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:15:26.352754 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m04:15:26.353855 [info ] [Thread-1 (]: 1 of 5 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m04:15:26.354641 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m04:15:26.355136 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m04:15:26.363813 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m04:15:26.365034 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m04:15:26.408900 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m04:15:26.410539 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as string) as coin_id,
+cast(name as string) as name,
+cast(symbol as string) as symbol,
+cast(current_price as float64) as current_price,
+
+cast(market_cap as float64) as market_cap,
+cast(market_cap_rank as int) as market_cap_rank,
+cast(total_volume as float64) as total_volume,
+
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(circulating_supply as float64) as circulating_supply,
+
+timestamp_trunc(last_updated, hour, "UTC") as timestamp_hour,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m04:15:26.411291 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:15:27.361629 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:7cf6d093-93ba-4ab2-baa7-418cb9c128fb&page=queryresults
+[0m04:15:28.182549 [debug] [Thread-1 (]: SQL status: OK in 0.820 seconds
+[0m04:15:28.274111 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '481bfcf8-4e6b-4715-9042-49fc428bd220', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f55a99c320>]}
+[0m04:15:28.275152 [info ] [Thread-1 (]: 1 of 5 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 1.92s]
+[0m04:15:28.276054 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m04:15:28.277645 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.fact_crypto_metrics
+[0m04:15:28.278228 [debug] [Thread-2 (]: Began running node model.crypto_pipeline.top_10_crypto
+[0m04:15:28.279283 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.top_10_market_overview
+[0m04:15:28.278870 [info ] [Thread-3 (]: 2 of 5 START sql table model crypto_project1.fact_crypto_metrics ............... [RUN]
+[0m04:15:28.280434 [info ] [Thread-2 (]: 3 of 5 START sql table model crypto_project1.top_10_crypto ..................... [RUN]
+[0m04:15:28.281448 [info ] [Thread-1 (]: 4 of 5 START sql table model crypto_project1.top_10_market_overview ............ [RUN]
+[0m04:15:28.282543 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.crypto_pipeline.fact_crypto_metrics'
+[0m04:15:28.284178 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.crypto_pipeline.top_10_crypto'
+[0m04:15:28.285324 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.crypto_pipeline.stg_crypto, now model.crypto_pipeline.top_10_market_overview)
+[0m04:15:28.286143 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.fact_crypto_metrics
+[0m04:15:28.286792 [debug] [Thread-2 (]: Began compiling node model.crypto_pipeline.top_10_crypto
+[0m04:15:28.287675 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.top_10_market_overview
+[0m04:15:28.293245 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.fact_crypto_metrics"
+[0m04:15:28.297599 [debug] [Thread-2 (]: Writing injected SQL for node "model.crypto_pipeline.top_10_crypto"
+[0m04:15:28.302134 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.top_10_market_overview"
+[0m04:15:28.304387 [debug] [Thread-2 (]: Began executing node model.crypto_pipeline.top_10_crypto
+[0m04:15:28.305366 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.fact_crypto_metrics
+[0m04:15:28.338557 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m04:15:28.339509 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.top_10_market_overview
+[0m04:15:28.348522 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:15:28.349811 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m04:15:29.140314 [debug] [Thread-2 (]: Writing runtime sql for node "model.crypto_pipeline.top_10_crypto"
+[0m04:15:29.141725 [debug] [Thread-2 (]: On model.crypto_pipeline.top_10_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.top_10_crypto"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`top_10_crypto`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      with base as (
+
+    select *
+    from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+    where market_cap_rank <= 10
+
+),
+
+latest_timestamp as (
+
+    select max(timestamp_hour) as max_ts
+    from base
+
+)
+
+select
+    b.timestamp_hour,
+    b.coin_id,
+    b.name,
+    b.symbol,
+    b.current_price,
+    b.market_cap,
+    b.total_volume,
+    b.price_change_percentage_24h,
+    b.market_cap_rank
+
+from base b
+join latest_timestamp t
+    on b.timestamp_hour = t.max_ts
+    );
+  
+[0m04:15:29.147088 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.fact_crypto_metrics"
+[0m04:15:29.148633 [debug] [Thread-3 (]: On model.crypto_pipeline.fact_crypto_metrics: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.fact_crypto_metrics"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`fact_crypto_metrics`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+    coin_id,
+    name,
+    symbol,
+
+    current_price,
+    market_cap,
+    total_volume,
+    price_change_percentage_24h
+
+from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+    );
+  
+[0m04:15:29.170436 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.top_10_market_overview"
+[0m04:15:29.171451 [debug] [Thread-1 (]: On model.crypto_pipeline.top_10_market_overview: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.top_10_market_overview"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`top_10_market_overview`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+
+    sum(market_cap) as top_10_market_cap,
+    sum(total_volume) as top_10_volume
+
+from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+
+where market_cap_rank <= 10
+
+group by timestamp_hour
+    );
+  
+[0m04:15:30.019827 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:572c6518-b333-456d-a2ed-fa4f03d88eba&page=queryresults
+[0m04:15:30.028102 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:4461a630-db59-44a1-a6e8-ade3036bcc01&page=queryresults
+[0m04:15:30.055843 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:35251b4f-e3f2-453b-988a-2fc336cd2610&page=queryresults
+[0m04:15:32.051272 [debug] [Thread-1 (]: SQL status: OK in 2.030 seconds
+[0m04:15:32.365717 [debug] [Thread-2 (]: SQL status: OK in 2.309 seconds
+[0m04:15:32.409764 [debug] [Thread-3 (]: SQL status: OK in 2.381 seconds
+[0m04:15:32.477755 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '481bfcf8-4e6b-4715-9042-49fc428bd220', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f533458080>]}
+[0m04:15:32.478853 [info ] [Thread-1 (]: 4 of 5 OK created sql table model crypto_project1.top_10_market_overview ....... [[32mCREATE TABLE (4.0 rows, 37.2 KiB processed)[0m in 4.19s]
+[0m04:15:32.479980 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.top_10_market_overview
+[0m04:15:32.824639 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '481bfcf8-4e6b-4715-9042-49fc428bd220', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f5334587d0>]}
+[0m04:15:32.825742 [info ] [Thread-2 (]: 3 of 5 OK created sql table model crypto_project1.top_10_crypto ................ [[32mCREATE TABLE (10.0 rows, 110.8 KiB processed)[0m in 4.54s]
+[0m04:15:32.826824 [debug] [Thread-2 (]: Finished running node model.crypto_pipeline.top_10_crypto
+[0m04:15:32.833848 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '481bfcf8-4e6b-4715-9042-49fc428bd220', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f57d1f8ad0>]}
+[0m04:15:32.835237 [info ] [Thread-3 (]: 2 of 5 OK created sql table model crypto_project1.fact_crypto_metrics .......... [[32mCREATE TABLE (1.2k rows, 82.9 KiB processed)[0m in 4.55s]
+[0m04:15:32.836496 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.fact_crypto_metrics
+[0m04:15:32.838430 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.agg_market_overview
+[0m04:15:32.839212 [info ] [Thread-1 (]: 5 of 5 START sql table model crypto_project1.agg_market_overview ............... [RUN]
+[0m04:15:32.839902 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.crypto_pipeline.top_10_market_overview, now model.crypto_pipeline.agg_market_overview)
+[0m04:15:32.840630 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.agg_market_overview
+[0m04:15:32.847018 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.agg_market_overview"
+[0m04:15:32.848162 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.agg_market_overview
+[0m04:15:32.853084 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:15:33.475962 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.agg_market_overview"
+[0m04:15:33.477429 [debug] [Thread-1 (]: On model.crypto_pipeline.agg_market_overview: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.agg_market_overview"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`agg_market_overview`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+
+    sum(market_cap) as total_market_cap,
+    sum(total_volume) as total_volume,
+    avg(current_price) as avg_price,
+    avg(price_change_percentage_24h) as avg_price_change_24h
+
+from `dtc-course-486211`.`crypto_project1`.`fact_crypto_metrics`
+
+group by timestamp_hour
+    );
+  
+[0m04:15:34.181316 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:18950ad7-42cf-4e5a-850f-9fbe2f25b689&page=queryresults
+[0m04:15:36.197917 [debug] [Thread-1 (]: SQL status: OK in 2.016 seconds
+[0m04:15:36.623278 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '481bfcf8-4e6b-4715-9042-49fc428bd220', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f57d1f8ad0>]}
+[0m04:15:36.624375 [info ] [Thread-1 (]: 5 of 5 OK created sql table model crypto_project1.agg_market_overview .......... [[32mCREATE TABLE (5.0 rows, 46.4 KiB processed)[0m in 3.78s]
+[0m04:15:36.625252 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.agg_market_overview
+[0m04:15:36.628120 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m04:15:36.682141 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m04:15:36.682653 [debug] [MainThread]: Connection 'model.crypto_pipeline.agg_market_overview' was properly closed.
+[0m04:15:36.683019 [debug] [MainThread]: Connection 'model.crypto_pipeline.fact_crypto_metrics' was properly closed.
+[0m04:15:36.683344 [debug] [MainThread]: Connection 'model.crypto_pipeline.top_10_crypto' was properly closed.
+[0m04:15:36.683796 [info ] [MainThread]: 
+[0m04:15:36.684253 [info ] [MainThread]: Finished running 4 table models, 1 view model in 0 hours 0 minutes and 11.89 seconds (11.89s).
+[0m04:15:36.686181 [debug] [MainThread]: Command end result
+[0m04:15:36.728849 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m04:15:36.731953 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m04:15:36.739444 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m04:15:36.739992 [info ] [MainThread]: 
+[0m04:15:36.740525 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m04:15:36.741054 [info ] [MainThread]: 
+[0m04:15:36.741597 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m04:15:36.742409 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 15.796002, "process_in_blocks": "293720", "process_kernel_time": 1.51737, "process_mem_max_rss": "241176", "process_out_blocks": "3656", "process_user_time": 5.809359}
+[0m04:15:36.743185 [debug] [MainThread]: Command `dbt run` succeeded at 04:15:36.742974 after 15.80 seconds
+[0m04:15:36.743879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f57d4ba660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f57c39bd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71f57c39b9b0>]}
+[0m04:15:36.744748 [debug] [MainThread]: Flushing usage events
+[0m04:15:37.588587 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:16:29.356244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a689f641a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a689c2b1a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a68bdf6ea0>]}
+
+
+============================== 04:16:29.362168 | 880f088c-6eae-4c90-b9c0-3abaef7e5e7f ==============================
+[0m04:16:29.362168 [info ] [MainThread]: Running with dbt=1.11.8
+[0m04:16:29.363151 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'write_json': 'True', 'empty': 'False', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'target_path': 'None', 'version_check': 'True', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'debug': 'False', 'profiles_dir': '/home/vishwajeet/.dbt', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'printer_width': '80', 'use_colors': 'True'}
+[0m04:16:30.601410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a68bb698b0>]}
+[0m04:16:30.690907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66d6a3b60>]}
+[0m04:16:30.691841 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m04:16:30.897231 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m04:16:31.119473 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m04:16:31.120193 [debug] [MainThread]: Partial parsing: added file: crypto_pipeline://models/marts/top_10_crypto_latest.sql
+[0m04:16:31.120704 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/marts/top_10_crypto.sql
+[0m04:16:31.470683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66d2e5190>]}
+[0m04:16:31.586946 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m04:16:31.590518 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m04:16:31.606373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66c5e9850>]}
+[0m04:16:31.607409 [info ] [MainThread]: Found 6 models, 1 source, 539 macros
+[0m04:16:31.608184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66c5b8530>]}
+[0m04:16:31.611637 [info ] [MainThread]: 
+[0m04:16:31.612338 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m04:16:31.612908 [info ] [MainThread]: 
+[0m04:16:31.613719 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m04:16:31.620565 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m04:16:31.621495 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:16:32.420421 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now list_dtc-course-486211_crypto_project1)
+[0m04:16:32.421249 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m04:16:33.083293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66d8337a0>]}
+[0m04:16:33.084218 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:16:33.140304 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m04:16:33.141397 [info ] [Thread-1 (]: 1 of 6 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m04:16:33.142093 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m04:16:33.142619 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m04:16:33.151113 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m04:16:33.152948 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m04:16:33.197626 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m04:16:33.198667 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as string) as coin_id,
+cast(name as string) as name,
+cast(symbol as string) as symbol,
+cast(current_price as float64) as current_price,
+
+cast(market_cap as float64) as market_cap,
+cast(market_cap_rank as int) as market_cap_rank,
+cast(total_volume as float64) as total_volume,
+
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(circulating_supply as float64) as circulating_supply,
+
+timestamp_trunc(last_updated, hour, "UTC") as timestamp_hour,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m04:16:33.199400 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:16:34.260772 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:7975a184-29cc-400f-a48b-19fa2ac79b9b&page=queryresults
+[0m04:16:35.065409 [debug] [Thread-1 (]: SQL status: OK in 0.804 seconds
+[0m04:16:35.151505 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66d7c72c0>]}
+[0m04:16:35.153055 [info ] [Thread-1 (]: 1 of 6 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 2.00s]
+[0m04:16:35.154178 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m04:16:35.156935 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.fact_crypto_metrics
+[0m04:16:35.159228 [debug] [Thread-2 (]: Began running node model.crypto_pipeline.top_10_crypto
+[0m04:16:35.160209 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.top_10_crypto_latest
+[0m04:16:35.158313 [info ] [Thread-3 (]: 2 of 6 START sql table model crypto_project1.fact_crypto_metrics ............... [RUN]
+[0m04:16:35.162628 [info ] [Thread-2 (]: 3 of 6 START sql table model crypto_project1.top_10_crypto ..................... [RUN]
+[0m04:16:35.164902 [info ] [Thread-1 (]: 4 of 6 START sql table model crypto_project1.top_10_crypto_latest .............. [RUN]
+[0m04:16:35.167013 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.crypto_pipeline.fact_crypto_metrics'
+[0m04:16:35.168650 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.crypto_pipeline.top_10_crypto'
+[0m04:16:35.169533 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.crypto_pipeline.stg_crypto, now model.crypto_pipeline.top_10_crypto_latest)
+[0m04:16:35.170859 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.fact_crypto_metrics
+[0m04:16:35.172488 [debug] [Thread-2 (]: Began compiling node model.crypto_pipeline.top_10_crypto
+[0m04:16:35.174063 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.top_10_crypto_latest
+[0m04:16:35.179169 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.fact_crypto_metrics"
+[0m04:16:35.185013 [debug] [Thread-2 (]: Writing injected SQL for node "model.crypto_pipeline.top_10_crypto"
+[0m04:16:35.190498 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.top_10_crypto_latest"
+[0m04:16:35.193383 [debug] [Thread-2 (]: Began executing node model.crypto_pipeline.top_10_crypto
+[0m04:16:35.194869 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.fact_crypto_metrics
+[0m04:16:35.206965 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.top_10_crypto_latest
+[0m04:16:35.217105 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m04:16:35.212785 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m04:16:35.305081 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.top_10_crypto_latest"
+[0m04:16:35.367995 [debug] [Thread-1 (]: On model.crypto_pipeline.top_10_crypto_latest: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.top_10_crypto_latest"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`top_10_crypto_latest`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      with base as (
+
+    select *
+    from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+    where market_cap_rank <= 10
+
+),
+
+latest_timestamp as (
+
+    select max(timestamp_hour) as max_ts
+    from base
+
+)
+
+select
+    b.timestamp_hour,
+    b.coin_id,
+    b.name,
+    b.symbol,
+    b.current_price,
+    b.market_cap,
+    b.total_volume,
+    b.price_change_percentage_24h,
+    b.market_cap_rank
+
+from base b
+join latest_timestamp t
+    on b.timestamp_hour = t.max_ts
+    );
+  
+[0m04:16:35.369027 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:16:36.007332 [debug] [Thread-2 (]: Writing runtime sql for node "model.crypto_pipeline.top_10_crypto"
+[0m04:16:36.008559 [debug] [Thread-2 (]: On model.crypto_pipeline.top_10_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.top_10_crypto"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`top_10_crypto`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+    coin_id,
+    name,
+    symbol,
+
+    current_price,
+    market_cap,
+    total_volume,
+    price_change_percentage_24h,
+    market_cap_rank
+
+from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+
+where market_cap_rank <= 10
+    );
+  
+[0m04:16:36.012472 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.fact_crypto_metrics"
+[0m04:16:36.014188 [debug] [Thread-3 (]: On model.crypto_pipeline.fact_crypto_metrics: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.fact_crypto_metrics"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`fact_crypto_metrics`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+    coin_id,
+    name,
+    symbol,
+
+    current_price,
+    market_cap,
+    total_volume,
+    price_change_percentage_24h
+
+from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+    );
+  
+[0m04:16:36.473535 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:f452abc0-1659-4e31-a17b-2b52c1308f38&page=queryresults
+[0m04:16:36.878506 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:d6bbde83-b560-472f-94db-42cd21934b22&page=queryresults
+[0m04:16:37.068669 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:495a7cd6-757e-4f30-9af4-1823a808fd2f&page=queryresults
+[0m04:16:38.511078 [debug] [Thread-1 (]: SQL status: OK in 2.037 seconds
+[0m04:16:38.893868 [debug] [Thread-2 (]: SQL status: OK in 2.014 seconds
+[0m04:16:38.927103 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66c1a5fa0>]}
+[0m04:16:38.928559 [info ] [Thread-1 (]: 4 of 6 OK created sql table model crypto_project1.top_10_crypto_latest ......... [[32mCREATE TABLE (10.0 rows, 110.8 KiB processed)[0m in 3.76s]
+[0m04:16:38.929851 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.top_10_crypto_latest
+[0m04:16:38.930542 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.top_10_market_overview
+[0m04:16:38.931427 [info ] [Thread-1 (]: 5 of 6 START sql table model crypto_project1.top_10_market_overview ............ [RUN]
+[0m04:16:38.932106 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.crypto_pipeline.top_10_crypto_latest, now model.crypto_pipeline.top_10_market_overview)
+[0m04:16:38.932608 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.top_10_market_overview
+[0m04:16:38.937155 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.top_10_market_overview"
+[0m04:16:38.938624 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.top_10_market_overview
+[0m04:16:38.942693 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m04:16:39.330935 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66c2ad4c0>]}
+[0m04:16:39.332520 [info ] [Thread-2 (]: 3 of 6 OK created sql table model crypto_project1.top_10_crypto ................ [[32mCREATE TABLE (40.0 rows, 92.2 KiB processed)[0m in 4.16s]
+[0m04:16:39.333390 [debug] [Thread-2 (]: Finished running node model.crypto_pipeline.top_10_crypto
+[0m04:16:39.581599 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.top_10_market_overview"
+[0m04:16:39.582869 [debug] [Thread-1 (]: On model.crypto_pipeline.top_10_market_overview: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.top_10_market_overview"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`top_10_market_overview`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+
+    sum(market_cap) as top_10_market_cap,
+    sum(total_volume) as top_10_volume
+
+from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+
+where market_cap_rank <= 10
+
+group by timestamp_hour
+    );
+  
+[0m04:16:39.634452 [debug] [Thread-3 (]: SQL status: OK in 2.565 seconds
+[0m04:16:38.954766 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66c1c4ef0>]}
+[0m04:16:38.955790 [info ] [Thread-3 (]: 2 of 6 OK created sql table model crypto_project1.fact_crypto_metrics .......... [[32mCREATE TABLE (1.2k rows, 82.9 KiB processed)[0m in 3.79s]
+[0m04:16:38.956634 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.fact_crypto_metrics
+[0m04:16:38.957688 [debug] [Thread-2 (]: Began running node model.crypto_pipeline.agg_market_overview
+[0m04:16:38.958346 [info ] [Thread-2 (]: 6 of 6 START sql table model crypto_project1.agg_market_overview ............... [RUN]
+[0m04:16:38.959442 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.crypto_pipeline.top_10_crypto, now model.crypto_pipeline.agg_market_overview)
+[0m04:16:38.960320 [debug] [Thread-2 (]: Began compiling node model.crypto_pipeline.agg_market_overview
+[0m04:16:38.964318 [debug] [Thread-2 (]: Writing injected SQL for node "model.crypto_pipeline.agg_market_overview"
+[0m04:16:38.965884 [debug] [Thread-2 (]: Began executing node model.crypto_pipeline.agg_market_overview
+[0m04:16:38.969877 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m04:16:39.295860 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:4bd3a288-7485-43bd-8666-54deafb178a8&page=queryresults
+[0m04:16:39.630866 [debug] [Thread-2 (]: Writing runtime sql for node "model.crypto_pipeline.agg_market_overview"
+[0m04:16:39.632325 [debug] [Thread-2 (]: On model.crypto_pipeline.agg_market_overview: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.agg_market_overview"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`agg_market_overview`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+
+    sum(market_cap) as total_market_cap,
+    sum(total_volume) as total_volume,
+    avg(current_price) as avg_price,
+    avg(price_change_percentage_24h) as avg_price_change_24h
+
+from `dtc-course-486211`.`crypto_project1`.`fact_crypto_metrics`
+
+group by timestamp_hour
+    );
+  
+[0m04:16:40.331949 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:58948ad6-3449-4f46-b2af-0cb0b962e6eb&page=queryresults
+[0m04:16:41.289201 [debug] [Thread-1 (]: SQL status: OK in 1.992 seconds
+[0m04:16:41.737187 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66c1c5af0>]}
+[0m04:16:41.738340 [info ] [Thread-1 (]: 5 of 6 OK created sql table model crypto_project1.top_10_market_overview ....... [[32mCREATE TABLE (4.0 rows, 37.2 KiB processed)[0m in 2.80s]
+[0m04:16:41.739200 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.top_10_market_overview
+[0m04:16:42.369367 [debug] [Thread-2 (]: SQL status: OK in 2.037 seconds
+[0m04:16:42.791397 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '880f088c-6eae-4c90-b9c0-3abaef7e5e7f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66c1c5af0>]}
+[0m04:16:42.792789 [info ] [Thread-2 (]: 6 of 6 OK created sql table model crypto_project1.agg_market_overview .......... [[32mCREATE TABLE (5.0 rows, 46.4 KiB processed)[0m in 3.83s]
+[0m04:16:42.793805 [debug] [Thread-2 (]: Finished running node model.crypto_pipeline.agg_market_overview
+[0m04:16:42.797705 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m04:16:42.868427 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m04:16:42.869578 [debug] [MainThread]: Connection 'model.crypto_pipeline.top_10_market_overview' was properly closed.
+[0m04:16:42.870668 [debug] [MainThread]: Connection 'model.crypto_pipeline.fact_crypto_metrics' was properly closed.
+[0m04:16:42.871620 [debug] [MainThread]: Connection 'model.crypto_pipeline.agg_market_overview' was properly closed.
+[0m04:16:42.872681 [info ] [MainThread]: 
+[0m04:16:42.873602 [info ] [MainThread]: Finished running 5 table models, 1 view model in 0 hours 0 minutes and 11.26 seconds (11.26s).
+[0m04:16:42.878350 [debug] [MainThread]: Command end result
+[0m04:16:42.944270 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m04:16:42.948334 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m04:16:42.960314 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m04:16:42.960950 [info ] [MainThread]: 
+[0m04:16:42.961576 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m04:16:42.962144 [info ] [MainThread]: 
+[0m04:16:42.963316 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m04:16:42.964732 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 14.780365, "process_in_blocks": "32", "process_kernel_time": 0.881053, "process_mem_max_rss": "241080", "process_out_blocks": "3696", "process_user_time": 5.534724}
+[0m04:16:42.965696 [debug] [MainThread]: Command `dbt run` succeeded at 04:16:42.965472 after 14.78 seconds
+[0m04:16:42.966400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a68ac90110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a68b952330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73a66ec411c0>]}
+[0m04:16:42.967163 [debug] [MainThread]: Flushing usage events
+[0m04:16:44.797500 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:20:38.600156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e20b9101d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e20986ab40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e2095add30>]}
+
+
+============================== 05:20:38.619422 | dd6a52a4-5b04-46f6-ae19-6e2024b57520 ==============================
+[0m05:20:38.619422 [info ] [MainThread]: Running with dbt=1.11.8
+[0m05:20:38.620291 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'introspect': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'fail_fast': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'invocation_command': 'dbt run', 'profiles_dir': '/home/vishwajeet/.dbt', 'static_parser': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'write_json': 'True', 'use_colors': 'True', 'version_check': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'printer_width': '80', 'partial_parse': 'True', 'log_path': '/home/vishwajeet/capstone_DT/dbt/logs', 'debug': 'False'}
+[0m05:20:41.135389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dd6a52a4-5b04-46f6-ae19-6e2024b57520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e1ed241310>]}
+[0m05:20:41.226878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dd6a52a4-5b04-46f6-ae19-6e2024b57520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e1eeae1e80>]}
+[0m05:20:41.228016 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m05:20:41.454635 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m05:20:41.759283 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 0 files added, 2 files changed.
+[0m05:20:41.759896 [debug] [MainThread]: Partial parsing: deleted file: crypto_pipeline://models/marts/top_10_market_overview.sql
+[0m05:20:41.760403 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/marts/fact_crypto_metrics.sql
+[0m05:20:41.760864 [debug] [MainThread]: Partial parsing: updated file: crypto_pipeline://models/marts/top_10_crypto_latest.sql
+[0m05:20:42.206940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dd6a52a4-5b04-46f6-ae19-6e2024b57520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e1ed2b3aa0>]}
+[0m05:20:42.355263 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m05:20:42.359481 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m05:20:42.377134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dd6a52a4-5b04-46f6-ae19-6e2024b57520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e1ecdcd220>]}
+[0m05:20:42.377803 [info ] [MainThread]: Found 5 models, 1 source, 539 macros
+[0m05:20:42.378439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd6a52a4-5b04-46f6-ae19-6e2024b57520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e1ee8b6a20>]}
+[0m05:20:42.381390 [info ] [MainThread]: 
+[0m05:20:42.382008 [info ] [MainThread]: Concurrency: 3 threads (target='dev')
+[0m05:20:42.382576 [info ] [MainThread]: 
+[0m05:20:42.383257 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m05:20:42.389911 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211'
+[0m05:20:42.390925 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:20:43.293062 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dtc-course-486211_crypto_project1'
+[0m05:20:43.294362 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:20:44.082852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd6a52a4-5b04-46f6-ae19-6e2024b57520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e20a0151f0>]}
+[0m05:20:44.083552 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:20:44.143187 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.stg_crypto
+[0m05:20:44.144103 [info ] [Thread-1 (]: 1 of 5 START sql view model crypto_project1.stg_crypto ......................... [RUN]
+[0m05:20:44.144827 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211_crypto_project1, now model.crypto_pipeline.stg_crypto)
+[0m05:20:44.145508 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.stg_crypto
+[0m05:20:44.154740 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.stg_crypto"
+[0m05:20:44.156188 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.stg_crypto
+[0m05:20:44.200985 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.stg_crypto"
+[0m05:20:44.201952 [debug] [Thread-1 (]: On model.crypto_pipeline.stg_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.stg_crypto"} */
+
+
+  create or replace view `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+  OPTIONS()
+  as SELECT 
+
+cast(id as string) as coin_id,
+cast(name as string) as name,
+cast(symbol as string) as symbol,
+cast(current_price as float64) as current_price,
+
+cast(market_cap as float64) as market_cap,
+cast(market_cap_rank as int) as market_cap_rank,
+cast(total_volume as float64) as total_volume,
+
+cast(high_24h as float64) as high_24h,
+cast(low_24h as float64) as low_24h,
+cast(price_change_percentage_24h as float64) as price_change_percentage_24h,
+
+cast(ath as float64) as ath,
+cast(atl as float64) as atl,
+cast(circulating_supply as float64) as circulating_supply,
+
+timestamp_trunc(last_updated, hour, "UTC") as timestamp_hour,
+cast(year as int) as year,
+cast(month as int) as month,
+cast(day as int) as day,
+cast(hour as int) as hour
+
+FROM `dtc-course-486211`.`crypto_project1`.`crypto_data_ext`;
+
+
+[0m05:20:44.202650 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:20:45.131191 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:e3462e33-b298-4abc-b16e-6724a2b13854&page=queryresults
+[0m05:20:45.936294 [debug] [Thread-1 (]: SQL status: OK in 0.804 seconds
+[0m05:20:46.009551 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dd6a52a4-5b04-46f6-ae19-6e2024b57520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e209c7fb90>]}
+[0m05:20:46.010670 [info ] [Thread-1 (]: 1 of 5 OK created sql view model crypto_project1.stg_crypto .................... [[32mCREATE VIEW (0 processed)[0m in 1.86s]
+[0m05:20:46.011571 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.stg_crypto
+[0m05:20:46.013252 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.fact_crypto_metrics
+[0m05:20:46.015066 [debug] [Thread-2 (]: Began running node model.crypto_pipeline.top_10_crypto
+[0m05:20:46.016011 [info ] [Thread-3 (]: 2 of 5 START sql table model crypto_project1.fact_crypto_metrics ............... [RUN]
+[0m05:20:46.017183 [info ] [Thread-2 (]: 3 of 5 START sql table model crypto_project1.top_10_crypto ..................... [RUN]
+[0m05:20:46.019016 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.crypto_pipeline.fact_crypto_metrics'
+[0m05:20:46.020343 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_dtc-course-486211, now model.crypto_pipeline.top_10_crypto)
+[0m05:20:46.021798 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.fact_crypto_metrics
+[0m05:20:46.024037 [debug] [Thread-2 (]: Began compiling node model.crypto_pipeline.top_10_crypto
+[0m05:20:46.030913 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.fact_crypto_metrics"
+[0m05:20:46.036200 [debug] [Thread-2 (]: Writing injected SQL for node "model.crypto_pipeline.top_10_crypto"
+[0m05:20:46.038172 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.fact_crypto_metrics
+[0m05:20:46.038933 [debug] [Thread-2 (]: Began executing node model.crypto_pipeline.top_10_crypto
+[0m05:20:46.068460 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m05:20:46.083606 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:20:46.864372 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.fact_crypto_metrics"
+[0m05:20:46.867033 [debug] [Thread-2 (]: Writing runtime sql for node "model.crypto_pipeline.top_10_crypto"
+[0m05:20:46.868184 [debug] [Thread-3 (]: On model.crypto_pipeline.fact_crypto_metrics: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.fact_crypto_metrics"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`fact_crypto_metrics`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+    coin_id,
+    name,
+    symbol,
+
+    current_price,
+    market_cap,
+    total_volume,
+    high_24h,
+    low_24h,
+    price_change_percentage_24h,
+    ath,
+    atl,
+    circulating_supply
+
+from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+    );
+  
+[0m05:20:46.869465 [debug] [Thread-2 (]: On model.crypto_pipeline.top_10_crypto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.top_10_crypto"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`top_10_crypto`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+    coin_id,
+    name,
+    symbol,
+
+    current_price,
+    market_cap,
+    total_volume,
+    price_change_percentage_24h,
+    market_cap_rank
+
+from `dtc-course-486211`.`crypto_project1`.`stg_crypto`
+
+where market_cap_rank <= 10
+    );
+  
+[0m05:20:47.717495 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:dec36e6b-c1b8-4ff0-bff5-d6b74f6c0c03&page=queryresults
+[0m05:20:47.718347 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:dbd3c450-0f4c-477e-b3b9-8da222ca8a7b&page=queryresults
+[0m05:20:49.742837 [debug] [Thread-2 (]: SQL status: OK in 2.023 seconds
+[0m05:20:49.753579 [debug] [Thread-3 (]: SQL status: OK in 2.034 seconds
+[0m05:20:50.208821 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dd6a52a4-5b04-46f6-ae19-6e2024b57520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e1d4e72810>]}
+[0m05:20:50.210028 [info ] [Thread-3 (]: 2 of 5 OK created sql table model crypto_project1.fact_crypto_metrics .......... [[32mCREATE TABLE (1.2k rows, 129.4 KiB processed)[0m in 4.19s]
+[0m05:20:50.211396 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.fact_crypto_metrics
+[0m05:20:50.212971 [debug] [Thread-1 (]: Began running node model.crypto_pipeline.agg_market_overview
+[0m05:20:50.214112 [info ] [Thread-1 (]: 4 of 5 START sql table model crypto_project1.agg_market_overview ............... [RUN]
+[0m05:20:50.215295 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.crypto_pipeline.stg_crypto, now model.crypto_pipeline.agg_market_overview)
+[0m05:20:50.215930 [debug] [Thread-1 (]: Began compiling node model.crypto_pipeline.agg_market_overview
+[0m05:20:50.222248 [debug] [Thread-1 (]: Writing injected SQL for node "model.crypto_pipeline.agg_market_overview"
+[0m05:20:50.224034 [debug] [Thread-1 (]: Began executing node model.crypto_pipeline.agg_market_overview
+[0m05:20:50.228181 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:20:50.312132 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dd6a52a4-5b04-46f6-ae19-6e2024b57520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e1d4d67e00>]}
+[0m05:20:50.313294 [info ] [Thread-2 (]: 3 of 5 OK created sql table model crypto_project1.top_10_crypto ................ [[32mCREATE TABLE (40.0 rows, 92.2 KiB processed)[0m in 4.29s]
+[0m05:20:50.314947 [debug] [Thread-2 (]: Finished running node model.crypto_pipeline.top_10_crypto
+[0m05:20:50.316558 [debug] [Thread-3 (]: Began running node model.crypto_pipeline.top_10_crypto_latest
+[0m05:20:50.317624 [info ] [Thread-3 (]: 5 of 5 START sql table model crypto_project1.top_10_crypto_latest .............. [RUN]
+[0m05:20:50.318556 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.crypto_pipeline.fact_crypto_metrics, now model.crypto_pipeline.top_10_crypto_latest)
+[0m05:20:50.319091 [debug] [Thread-3 (]: Began compiling node model.crypto_pipeline.top_10_crypto_latest
+[0m05:20:50.329855 [debug] [Thread-3 (]: Writing injected SQL for node "model.crypto_pipeline.top_10_crypto_latest"
+[0m05:20:50.330909 [debug] [Thread-3 (]: Began executing node model.crypto_pipeline.top_10_crypto_latest
+[0m05:20:50.333738 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:20:50.988732 [debug] [Thread-1 (]: Writing runtime sql for node "model.crypto_pipeline.agg_market_overview"
+[0m05:20:50.989778 [debug] [Thread-1 (]: On model.crypto_pipeline.agg_market_overview: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.agg_market_overview"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`agg_market_overview`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      select
+    timestamp_hour,
+
+    sum(market_cap) as total_market_cap,
+    sum(total_volume) as total_volume,
+    avg(current_price) as avg_price,
+    avg(price_change_percentage_24h) as avg_price_change_24h
+
+from `dtc-course-486211`.`crypto_project1`.`fact_crypto_metrics`
+
+group by timestamp_hour
+    );
+  
+[0m05:20:51.016939 [debug] [Thread-3 (]: Writing runtime sql for node "model.crypto_pipeline.top_10_crypto_latest"
+[0m05:20:51.018173 [debug] [Thread-3 (]: On model.crypto_pipeline.top_10_crypto_latest: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "crypto_pipeline", "target_name": "dev", "node_id": "model.crypto_pipeline.top_10_crypto_latest"} */
+
+  
+    
+
+    create or replace table `dtc-course-486211`.`crypto_project1`.`top_10_crypto_latest`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      with base as (
+
+    select *
+    from `dtc-course-486211`.`crypto_project1`.`top_10_crypto`
+
+),
+
+latest as (
+
+    select max(timestamp_hour) as max_ts
+    from base
+
+)
+
+select b.*
+from base b
+join latest l
+    on b.timestamp_hour = l.max_ts
+    );
+  
+[0m05:20:51.678644 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:fc3b1ac0-8e17-45d5-8d8f-f2f31b2ce9da&page=queryresults
+[0m05:20:51.742789 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dtc-course-486211&j=bq:US:2528b0ac-d541-4760-86f7-90094a720031&page=queryresults
+[0m05:20:53.719001 [debug] [Thread-1 (]: SQL status: OK in 2.040 seconds
+[0m05:20:54.025248 [debug] [Thread-3 (]: SQL status: OK in 2.282 seconds
+[0m05:20:54.181880 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dd6a52a4-5b04-46f6-ae19-6e2024b57520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e1d4d32e40>]}
+[0m05:20:54.182985 [info ] [Thread-1 (]: 4 of 5 OK created sql table model crypto_project1.agg_market_overview .......... [[32mCREATE TABLE (5.0 rows, 46.4 KiB processed)[0m in 3.97s]
+[0m05:20:54.183844 [debug] [Thread-1 (]: Finished running node model.crypto_pipeline.agg_market_overview
+[0m05:20:54.472973 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dd6a52a4-5b04-46f6-ae19-6e2024b57520', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e1d4d832f0>]}
+[0m05:20:54.474078 [info ] [Thread-3 (]: 5 of 5 OK created sql table model crypto_project1.top_10_crypto_latest ......... [[32mCREATE TABLE (10.0 rows, 2.8 KiB processed)[0m in 4.15s]
+[0m05:20:54.475163 [debug] [Thread-3 (]: Finished running node model.crypto_pipeline.top_10_crypto_latest
+[0m05:20:54.478016 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:20:54.534993 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:20:54.535540 [debug] [MainThread]: Connection 'model.crypto_pipeline.top_10_crypto' was properly closed.
+[0m05:20:54.536001 [debug] [MainThread]: Connection 'model.crypto_pipeline.agg_market_overview' was properly closed.
+[0m05:20:54.536436 [debug] [MainThread]: Connection 'model.crypto_pipeline.top_10_crypto_latest' was properly closed.
+[0m05:20:54.536980 [info ] [MainThread]: 
+[0m05:20:54.537551 [info ] [MainThread]: Finished running 4 table models, 1 view model in 0 hours 0 minutes and 12.15 seconds (12.15s).
+[0m05:20:54.539272 [debug] [MainThread]: Command end result
+[0m05:20:54.585485 [debug] [MainThread]: Wrote artifact WritableManifest to /home/vishwajeet/capstone_DT/dbt/target/manifest.json
+[0m05:20:54.588118 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/vishwajeet/capstone_DT/dbt/target/semantic_manifest.json
+[0m05:20:54.595270 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/vishwajeet/capstone_DT/dbt/target/run_results.json
+[0m05:20:54.595873 [info ] [MainThread]: 
+[0m05:20:54.596432 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:20:54.597003 [info ] [MainThread]: 
+[0m05:20:54.597568 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m05:20:54.598695 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 16.113852, "process_in_blocks": "293360", "process_kernel_time": 1.618229, "process_mem_max_rss": "240876", "process_out_blocks": "3656", "process_user_time": 5.757163}
+[0m05:20:54.599497 [debug] [MainThread]: Command `dbt run` succeeded at 05:20:54.599304 after 16.11 seconds
+[0m05:20:54.600045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e209309f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e1ee1b6870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74e20ba1f170>]}
+[0m05:20:54.600611 [debug] [MainThread]: Flushing usage events
+[0m05:20:55.291867 [debug] [MainThread]: An error was encountered while trying to flush usage events

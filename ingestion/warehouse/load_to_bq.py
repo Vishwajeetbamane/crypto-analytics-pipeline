@@ -24,4 +24,7 @@ def create_external_table():
 
     print(f"Created table {table.table_id}")
 
-create_external_table()
+    
+
+if __name__ == "__main__":
+    create_external_table()

@@ -68,3 +68,47 @@ df["ath_distance_pct"] = ((df["current_price"] - df["ath"]) / df["ath"]) * 100
 df["volatility"] = df["high_24h"] - df["low_24h"]
 
 df["liquidity_score"] = df["total_volume"] / df["market_cap"]
+
+
+
+1) fact_crypto_metrics
+Column	Formula / Definition
+timestamp	exists (derived from last_updated or ingestion partition time) 
+symbol	exists
+name	exists
+current_price	exists
+market_cap	exists
+total_volume	exists
+high_24h	exists
+low_24h	exists
+price_change_percentage_24h	exists
+ath	exists
+atl	exists
+circulating_supply	exists
+
+2) agg_market_overview
+Column	Formula / Definition
+timestamp	exists (same as fact table timestamp)
+total_market_cap	sum of market_cap across all coins at that timestamp
+total_volume	sum of total_volume across all coins at that timestamp
+btc_dominance	(market_cap of BTC ÷ total_market_cap) × 100
+eth_dominance	(market_cap of ETH ÷ total_market_cap) × 100
+top_10_market_cap	sum of market_cap of top 10 ranked coins
+top_10_volume	sum of total_volume of top 10 ranked coins
+
+3) agg_crypto_rankings
+Column	Formula / Definition
+timestamp	exists
+symbol	exists
+name	exists
+market_cap_rank	exists
+current_price	exists
+market_cap	exists
+total_volume	exists
+price_change_percentage_24h	exists
+volatility_24h	high_24h − low_24h (absolute spread) OR ((high_24h − low_24h) ÷ current_price) × 100 (percentage version)
+ath	exists
+ath_distance_percentage	((current_price − ath) ÷ ath) × 100
+is_top_10	true if market_cap_rank ≤ 10, else false
+rank_by_volume	ranking of coins ordered by total_volume (highest = 1)
+rank_by_market_cap	same as market_cap_rank (can reuse)

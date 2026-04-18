@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: src_crypto
+    description: "Sourced from BigQuery external table, this table contains cryptocurrency data."
+    database: dtc-course-486211
+    schema: crypto_project1
+    tables: 
+      - name: crypto_data_ext

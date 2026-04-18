@@ -37,10 +37,14 @@ def upload_blob(source):
         f"File {source_file_name} uploaded to {destination_blob_name}."
     )
 
+
+
 # Delete unwanted file
 def del_raw(source):
     os.remove(source)
     
 
-upload_blob(source)
-del_raw(source)
+
+if __name__ == "__main__":   
+    upload_blob(source)
+    del_raw(source)

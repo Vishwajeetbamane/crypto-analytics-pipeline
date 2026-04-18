@@ -1,0 +1,22 @@
+name: crypto_pipeline
+version: 1.0
+config-version: 2
+
+profile: crypto_pipeline
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  crypto_pipeline:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
