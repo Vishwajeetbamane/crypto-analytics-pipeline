@@ -55,7 +55,7 @@ project_path = Path(__file__).resolve().parent.parent.parent
 path = Path(f"{project_path}/parquet/data.parquet")
 path.parent.mkdir(parents=True, exist_ok=True)
 
-df.to_parquet(path)
+df.to_parquet(path, index=False)
 
 
 
