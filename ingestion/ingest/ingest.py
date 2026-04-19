@@ -1,5 +1,6 @@
 
 import requests
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 import pandas as pd
@@ -21,6 +22,7 @@ def run_ingest():
         
         if isinstance(data, list):
             all_data.extend(data)
+        time.sleep(1)
 
 
     df = pd.DataFrame(all_data)
@@ -52,10 +54,8 @@ def run_ingest():
 
     # saving parquet locally 
 
-    project_path = Path(__file__).resolve().parent.parent.parent
-    path = Path(f"{project_path}/parquet/data.parquet")
+    path = Path("/tmp/parquet/data.parquet")
     path.parent.mkdir(parents=True, exist_ok=True)
-
     df.to_parquet(path, index=False)
 
 

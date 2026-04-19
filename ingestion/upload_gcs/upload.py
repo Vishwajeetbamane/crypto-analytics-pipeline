@@ -1,4 +1,3 @@
-
 from google.cloud import storage
 from pathlib import Path
 from datetime import datetime, timezone
@@ -10,8 +9,8 @@ month = datetime.now(timezone.utc).strftime("%m")
 day = datetime.now(timezone.utc).strftime("%d")
 hour = datetime.now(timezone.utc).strftime("%H")
 
-project_path = Path(__file__).resolve().parent.parent.parent
-source = Path(f"{project_path}/parquet/data.parquet")
+
+source = Path("/tmp/parquet/data.parquet")
 
 def upload_blob(source):
     """Uploads a file to the bucket."""

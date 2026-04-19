@@ -1,0 +1,10 @@
+crypto_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: dtc-course-486211
+      dataset: crypto_project1
+      threads: 3
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
