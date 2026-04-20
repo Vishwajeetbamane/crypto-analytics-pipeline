@@ -15,8 +15,6 @@
 - [Screenshots](#screenshots)
 - [Local Development](#local-development)
 - [Monitoring & Troubleshooting](#monitoring--troubleshooting)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## ✨ Features
@@ -29,15 +27,18 @@
 
 ## 🏗️ Architecture
 ```mermaid
-graph TD
-    A[CoinGecko API<br/>Top 300 Coins] --> B[ingest.py<br/>Pandas → Parquet]
-    B --> C[upload.py<br/>GCS Partitioned<br/>crypto_project1/parquet/...]
-    C --> D[load_to_bq.py<br/>BQ External Table<br/>crypto_data_ext]
-    D --> E[dbt stg_crypto<br/>View: Casts + Dims]
-    E --> F[dbt Marts<br/>agg_market_overview<br/>top_10_crypto<br/>fact_metrics]
+graph LR
+    A[CoinGecko API Top 300 Coins] --> B[ingest.py Pandas Parquet]
+    B --> C[upload.py GCS Partitioned]
+    C --> D[load_to_bq.py BQ External Table]
+    D --> E[dbt stg_crypto View]
+    E --> F[dbt Marts agg_market_overview top_10_crypto fact_metrics]
     F --> G[Tableau Dashboards]
-    H[Airflow DAG<br/>Every 5 mins] -.->|Orchestrates| B & C & D & E
-    I[Docker Compose<br/>Airflow/Postgres] -.->|Runs| H
+    H[Airflow DAG Every 5 mins] -.-> B
+    H -.-> C
+    H -.-> D
+    H -.-> E
+    I[Docker Compose Airflow Postgres] -.-> H
 ```
 **Data Volume**: ~300 rows/run (columns: price, MCAP, volume, 24h change/high/low, ATH/ATL, supply, timestamps).
 
@@ -99,11 +100,11 @@ Example: `gs://crypto_project1/parquet/year=2024/month=10/day=15/hour=14/minute=
 **dbt Lineage**:
 ```mermaid
 graph LR
-    src_crypto[crypto_data_ext<br/>Source (Ext Table)] --> stg_crypto[stg_crypto<br/>View: Casts, dims<br/>year/month/day/hour/min]
-    stg_crypto --> agg_market[agg_market_overview<br/>Table: Total MCAP/Vol, Avg Price/Chg by ingestion_time]
-    stg_crypto --> top10[top_10_crypto<br/>Table: Top 10 MCAP]
-    stg_crypto --> top10_latest[top_10_crypto_latest<br/>Latest snapshot]
-    stg_crypto --> fact[fact_crypto_metrics<br/>Fact for downstream]
+    src_crypto[crypto_data_ext Source Ext Table] --> stg_crypto[stg_crypto View Casts dims]
+    stg_crypto --> agg_market[agg_market_overview Table Total MCAP Vol]
+    stg_crypto --> top10[top_10_crypto Table Top 10 MCAP]
+    stg_crypto --> top10_latest[top_10_crypto_latest Latest snapshot]
+    stg_crypto --> fact[fact_crypto_metrics Fact]
 ```
 
 **Key Schemas** (sample):
@@ -151,19 +152,7 @@ ORDER BY ingestion_time DESC LIMIT 24;  -- Last hour
   | dbt Fail | `dbt debug --profiles-dir dbt` |
   | No Data | Verify GCS uris, partitioning |
 
-## 🛣️ Roadmap
-- [ ] Add tests (Great Expectations/Pytest)
-- [ ] Incremental loads
-- [ ] Alerting (price surges >10%)
-- [ ] Multi-API (CoinMarketCap)
-- [ ] Streamlit/Web UI
 
-## 🤝 Contributing
-1. Fork → Clone → Create branch `feat/xyz`
-2. `docker compose up -d`
-3. Commit → PR (lint check)
-
-Thanks! 🎉
 
 ## 📄 License
 MIT License - see [LICENSE](LICENSE) *(create if missing)*.
