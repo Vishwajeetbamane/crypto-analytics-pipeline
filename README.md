@@ -15,7 +15,7 @@ Automated ETL pipeline for real-time cryptocurrency data. Fetches top 300 coins 
 
 ## 📋 Table of Contents
 - [Features](#features)
-- [Architecture](#architecture)
+- [Architecture Lineage](#architecture-lineage)
 - [Quickstart](#quickstart)
 - [Terraform Infra](#terraform-infra)
 - [Configuration](#configuration)
@@ -62,11 +62,12 @@ Data Volume: ~300 rows/run (17 cols: price, mcap, volume, etc.).
 - Docker & Docker Compose
 - Terraform (provision infra first)
 
-### 1. Clone & Setup
+### 1. Clone & Setup GCP Keys
 ```bash
 git clone <your-repo>
 cd capstone_DT
-cp keys/your-gcp-key.json keys/gcp-credentials.json  # Mounts to container
+mkdir -p keys
+cp /path/to/your-gcp-service-account.json keys/gcp-credentials.json  # .gitignore auto-excludes
 ```
 
 ### 2. Env Vars (`.env`)
@@ -90,25 +91,10 @@ bq query --use_legacy_sql=false 'SELECT * FROM \`crypto_project1.crypto_project1
 dbt run --profiles-dir dbt  # Manual (in dbt/venv)
 ```
 
-## ⚙️ Configuration
-### dbt `profiles.yml` (dbt/profiles.yml)
-```yaml
-crypto_pipeline:
-  target: dev
-  outputs:
-    dev:
-      type: bigquery
-      method: service-account
-      project: "{{ env_var('GCP_PROJECT_ID') }}"
-      dataset: "{{ env_var('BQ_DATASET') }}"
-      threads: 3
-      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
-```
+### GCS Bucket (via .env GCS_BUCKET_NAME)
+Full path: `gs://{{GCS_BUCKET_NAME}}/parquet/year={year}/month={month}/day={day}/hour={hour}/minute={minute}/{run_id}/data.parquet`
 
-### GCS Bucket
-Full path format: `gs://crypto_project1/parquet/year={year}/month={month}/day={day}/hour={hour}/minute={minute}/{run_id}/data.parquet`
-
-Example: `gs://crypto_project1/parquet/year=2024/month=10/day=15/hour=14/minute=30/abc12345/data.parquet`
+Example: `gs://crypto_project1-crypto-data/parquet/year=2024/month=10/day=15/hour=14/minute=30/abc12345/data.parquet`
 
 ## 📊 Data Models
 **dbt Lineage**:
