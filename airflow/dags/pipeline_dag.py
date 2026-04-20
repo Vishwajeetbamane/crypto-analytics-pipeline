@@ -6,7 +6,8 @@ with DAG(
     dag_id="crypto_pipeline",
     start_date=datetime(2024, 1, 1),
     schedule_interval="@hourly",
-    catchup=False
+    catchup=False,
+    is_paused_upon_creation=False
 ) as dag:
 
     ingest = BashOperator(

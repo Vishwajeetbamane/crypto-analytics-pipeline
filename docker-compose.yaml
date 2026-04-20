@@ -24,6 +24,7 @@ services:
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
       AIRFLOW__WEBSERVER__SECRET_KEY: "supersecretkey"
       GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/gcp-credentials.json
+   
 
     volumes:
       - ./airflow/dags:/opt/airflow/dags
@@ -46,6 +47,7 @@ services:
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
       AIRFLOW__WEBSERVER__SECRET_KEY: "supersecretkey"
       GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/gcp-credentials.json
+    
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./ingestion:/opt/airflow/ingestion
@@ -67,6 +69,7 @@ services:
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
       AIRFLOW__WEBSERVER__SECRET_KEY: "supersecretkey"
       GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/gcp-credentials.json
+     
 
     volumes:
       - ./airflow/dags:/opt/airflow/dags
