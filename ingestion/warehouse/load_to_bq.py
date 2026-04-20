@@ -1,19 +1,24 @@
+import os
 from google.cloud import bigquery
 
 def create_external_table():
     client = bigquery.Client()
 
-    table_id = "dtc-course-486211.crypto_project1.crypto_data_ext"
+    project_id = os.getenv('GCP_PROJECT_ID', 'dtc-course-486211')
+    dataset_id = os.getenv('BQ_DATASET', 'crypto_project1')
+    table_id = f"{project_id}.{dataset_id}.crypto_data_ext"
+
+    bucket_name = os.getenv('GCS_BUCKET_NAME', 'crypto_project1')
 
     external_config = bigquery.ExternalConfig("PARQUET")
     external_config.source_uris = [
-        "gs://crypto_project1/parquet/*"
+        f"gs://{bucket_name}/parquet/*"
     ]
 
     # Enable Hive partitioning
     hive_partitioning_opts = bigquery.external_config.HivePartitioningOptions()
     hive_partitioning_opts.mode = "AUTO"
-    hive_partitioning_opts.source_uri_prefix = "gs://crypto_project1/parquet/"
+    hive_partitioning_opts.source_uri_prefix = f"gs://{bucket_name}/parquet/"
 
 
     external_config.hive_partitioning = hive_partitioning_opts
