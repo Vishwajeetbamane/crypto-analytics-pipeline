@@ -129,7 +129,6 @@ ORDER BY ingestion_time DESC LIMIT 300;  -- Last min
 
 | ![Airflow DAG](images/airflow-dag.png) 
 
-*(Add your actual screenshots to `/images/`)*
 
 ## 🔧 Local Development
 - **Test DAG**: Airflow UI → Trigger DAG manually.
