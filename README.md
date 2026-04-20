@@ -164,3 +164,6 @@ ORDER BY ingestion_time DESC LIMIT 300;  -- Last min
 
 ## 📄 License
 MIT License - see [LICENSE](LICENSE)
+
+---
+***Author: Vishwajeet Bamane***
