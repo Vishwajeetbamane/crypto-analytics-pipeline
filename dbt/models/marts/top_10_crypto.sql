@@ -1,5 +1,5 @@
 select
-    timestamp_hour,
+    last_updated,
     coin_id,
     name,
     symbol,
@@ -8,7 +8,8 @@ select
     market_cap,
     total_volume,
     price_change_percentage_24h,
-    market_cap_rank
+    market_cap_rank,
+    ingestion_time 
 
 from {{ ref('stg_crypto') }}
 

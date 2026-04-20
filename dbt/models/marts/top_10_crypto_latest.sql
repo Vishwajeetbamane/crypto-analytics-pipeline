@@ -7,7 +7,7 @@ with base as (
 
 latest as (
 
-    select max(timestamp_hour) as max_ts
+    select max(ingestion_time) as max_ts
     from base
 
 )
@@ -15,4 +15,4 @@ latest as (
 select b.*
 from base b
 join latest l
-    on b.timestamp_hour = l.max_ts
+    on b.ingestion_time = l.max_ts

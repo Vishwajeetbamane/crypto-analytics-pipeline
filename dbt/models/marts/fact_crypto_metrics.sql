@@ -1,5 +1,5 @@
 select
-    timestamp_hour,
+    last_updated,
     coin_id,
     name,
     symbol,
@@ -12,6 +12,7 @@ select
     price_change_percentage_24h,
     ath,
     atl,
-    circulating_supply
+    circulating_supply,
+    ingestion_time
 
 from {{ ref('stg_crypto') }}
