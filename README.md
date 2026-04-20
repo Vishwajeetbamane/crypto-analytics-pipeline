@@ -122,12 +122,17 @@ ORDER BY ingestion_time DESC LIMIT 300;  -- Last min
 - **Coin Drilldown**: Prices, volumes over time.
 
 ![Tableau Dashboard 1](images/tableau-dashboard1.png)
+***Coin Trend (btc selected)***
 ![Tableau Dashboard 2](images/tableau-dashboard2.png)
+***Top 10 Coins Snapshot***
 ![Tableau Dashboard 3](images/tableau-dashboard3.png)
+***Time Series Charts***
 
 ## Screenshots
 
 | ![Airflow DAG](images/airflow-dag.png) 
+***Airflow DAG***
+
 
 
 ## 🔧 Local Development
