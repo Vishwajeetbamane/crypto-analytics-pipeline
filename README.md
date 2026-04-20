@@ -1,9 +1,18 @@
 ```markdown
-# 🚀 Crypto Market Data Pipeline ![Airflow](https://img.shields.io/badge/Airflow-Production-blue) ![dbt](https://img.shields.io/badge/dbt-Transformation-orange) ![Docker](https://img.shields.io/badge/Docker-Containerized-green) ![BigQuery](https://img.shields.io/badge/BigQuery-Storage-red) ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow)
+# Crypto Market Data Pipeline
+[![Airflow](https://img.shields.io/badge/Airflow-Production-blue)][airflow]
+[![dbt](https://img.shields.io/badge/dbt-Transformation-orange)][dbt]
+[![Docker](https://img.shields.io/badge/Docker-Containerized-green)][docker]
+[![BigQuery](https://img.shields.io/badge/BigQuery-Storage-red)][bq]
+[![Python](https://img.shields.io/badge/Python-3.8+-yellow)][python]
 
-[![Airflow UI](https://img.shields.io/badge/Airflow-UI-blue)](http://localhost:8080) [![dbt Docs](https://img.shields.io/badge/dbt-Docs-brightgreen)](docs/dbt-docs/index.html)
+[airflow]: http://localhost:8080
+[dbt]: docs/dbt-docs/index.html
+[docker]: https://hub.docker.com/
+[bq]: https://cloud.google.com/bigquery
+[python]: https://python.org/
 
-**Automated ETL pipeline for real-time cryptocurrency data**: Fetches top 300 coins from CoinGecko API every **5 minutes**, processes to partitioned Parquet → GCS → BigQuery external table, transforms with **dbt** (staging + marts), orchestrated by **Airflow**, containerized with **Docker**. Powers **Tableau** dashboards for market insights!
+Automated ETL pipeline for real-time cryptocurrency data. Fetches top 300 coins from CoinGecko API every 5 minutes, processes to partitioned Parquet -> GCS -> BigQuery external table, transforms with dbt (staging + marts), orchestrated by Airflow, containerized with Docker. Powers Tableau dashboards for market insights.
 
 ## 📋 Table of Contents
 - [Features](#features)
@@ -25,22 +34,14 @@
 - **🐳 Dockerized**: One-command setup (Airflow + Postgres).
 - **📈 Tableau-Ready**: Clean marts for dashboards (total MCAP, volume, top gainers, etc.).
 
-## 🏗️ Architecture
-```mermaid
-graph LR
-    A[CoinGecko API Top 300 Coins] --> B[ingest.py Pandas Parquet]
-    B --> C[upload.py GCS Partitioned]
-    C --> D[load_to_bq.py BQ External Table]
-    D --> E[dbt stg_crypto View]
-    E --> F[dbt Marts agg_market_overview top_10_crypto fact_metrics]
-    F --> G[Tableau Dashboards]
-    H[Airflow DAG Every 5 mins] -.-> B
-    H -.-> C
-    H -.-> D
-    H -.-> E
-    I[Docker Compose Airflow Postgres] -.-> H
+## Architecture
+
 ```
-**Data Volume**: ~300 rows/run (columns: price, MCAP, volume, 24h change/high/low, ATH/ATL, supply, timestamps).
+CoinGecko API --> ingest.py (Parquet) --> upload.py (GCS Partitioned) --> load_to_bq.py (BQ External) --> dbt stg_crypto --> Marts (agg/top10/fact) --> Tableau
+Airflow DAG orchestrates every 5 mins | Docker Compose runs all
+```
+
+Data Volume: ~300 rows/run (price, MCAP, volume, 24h change/high/low, ATH/ATL, supply, timestamps).
 
 ## 🚀 Quickstart
 ### Prerequisites
@@ -98,13 +99,9 @@ Example: `gs://crypto_project1/parquet/year=2024/month=10/day=15/hour=14/minute=
 
 ## 📊 Data Models
 **dbt Lineage**:
-```mermaid
-graph LR
-    src_crypto[crypto_data_ext Source Ext Table] --> stg_crypto[stg_crypto View Casts dims]
-    stg_crypto --> agg_market[agg_market_overview Table Total MCAP Vol]
-    stg_crypto --> top10[top_10_crypto Table Top 10 MCAP]
-    stg_crypto --> top10_latest[top_10_crypto_latest Latest snapshot]
-    stg_crypto --> fact[fact_crypto_metrics Fact]
+
+```
+crypto_data_ext --> stg_crypto (view) --> agg_market_overview, top_10_crypto, top_10_crypto_latest, fact_crypto_metrics (tables)
 ```
 
 **Key Schemas** (sample):
