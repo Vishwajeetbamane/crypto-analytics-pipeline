@@ -145,6 +145,10 @@ ORDER BY ingestion_time DESC LIMIT 300;  -- Last min
 
 
 
+## 🌐 Production Deployment
+
+**Live Instance**: Deployed on GCP VM—pipeline running remotely 24/7, continuously ingesting/transforming crypto data every 5 mins into BQ. Live Tableau dashboard viewing real-time market insights!
+
 ## 🔧 Local Development
 - **Test DAG**: Airflow UI → Trigger DAG manually.
 - **Data Preview**: `gcloud storage ls gs://crypto_project1/parquet/ --recursive`
