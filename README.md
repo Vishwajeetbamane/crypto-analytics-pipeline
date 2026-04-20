@@ -20,7 +20,7 @@ Automated ETL pipeline for real-time cryptocurrency data. Fetches top 300 coins 
 - [Terraform Infra](terraform/README.md)
 - [Data Models](#-data-models)
 - [Analytics & Visualization](#-analytics--visualization)
-- [Screenshots](#-screenshots)
+- [Screenshots](#screenshots)
 - [Local Development](#-local-development)
 - [Monitoring & Troubleshooting](#-monitoring--troubleshooting)
 - [License](#-license)
@@ -124,7 +124,7 @@ ORDER BY ingestion_time DESC LIMIT 24;  -- Last hour
 
 ![Tableau Dashboard](images/tableau-dashboard.png)
 
-## 🖼️ Screenshots
+## Screenshots
 | Airflow DAG | dbt Lineage | Tableau Overview |
 |-------------|-------------|-----------------|
 | ![Airflow](images/airflow-dag.png) | ![dbt](images/dbt-lineage.png) | ![Tableau](images/tableau-dashboard.png) |
