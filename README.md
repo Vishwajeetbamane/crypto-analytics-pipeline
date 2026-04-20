@@ -15,7 +15,7 @@ Automated ETL pipeline for real-time cryptocurrency data. Fetches top 300 coins 
 
 ## 📋 Table of Contents
 - [Features](#-features)
-- [Architecture Lineage](#-architecture-lineage)
+- [Architecture Lineage](#architecture-lineage)
 - [Quickstart](#-quickstart)
 - [Terraform Infra](#-terraform-infra)
 - [Data Models](#-data-models)
