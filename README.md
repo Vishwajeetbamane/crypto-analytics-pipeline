@@ -14,16 +14,16 @@
 Automated ETL pipeline for real-time cryptocurrency data. Fetches top 300 coins from CoinGecko API every 5 minutes, processes to partitioned Parquet -> GCS -> BigQuery external table, transforms with dbt (staging + marts), orchestrated by Airflow, containerized with Docker. Powers Tableau dashboards for market insights.
 
 ## 📋 Table of Contents
-- [Features](#features)
-- [Architecture Lineage](#architecture-lineage)
-- [Quickstart](#quickstart)
-- [Terraform Infra](#terraform-infra)
-- [Data Models](#data-models)
-- [Analytics & Visualization](#analytics--visualization)
-- [Screenshots](#screenshots)
-- [Local Development](#local-development)
-- [Monitoring & Troubleshooting](#monitoring--troubleshooting)
-- [License](#license)
+- [Features](#-features)
+- [Architecture Lineage](#-architecture-lineage)
+- [Quickstart](#-quickstart)
+- [Terraform Infra](#-terraform-infra)
+- [Data Models](#-data-models)
+- [Analytics & Visualization](#-analytics--visualization)
+- [Screenshots](#-screenshots)
+- [Local Development](#-local-development)
+- [Monitoring & Troubleshooting](#-monitoring--troubleshooting)
+- [License](#-license)
 
 ## ✨ Features
 - **📊 Real-time Ingestion**: Top 300 cryptos (market cap) from CoinGecko API.
