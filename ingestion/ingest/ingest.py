@@ -51,6 +51,8 @@ def run_ingest():
 
     #converting to valid pandas datetime object
     df["last_updated"] = pd.to_datetime(df["last_updated"])
+    df['market_cap_rank'] = df['market_cap_rank'].fillna(0).astype(int)
+
 
     # saving parquet locally 
 
