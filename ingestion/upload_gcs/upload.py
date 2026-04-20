@@ -23,7 +23,7 @@ def upload_blob(source):
    
 
     # The ID of your GCS bucket
-    bucket_name = "crypto_project1"
+    bucket_name = os.getenv('GCS_BUCKET_NAME')
 
     # The path to your file to upload
 

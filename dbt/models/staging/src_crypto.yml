@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: src_crypto
     description: "Sourced from BigQuery external table, this table contains cryptocurrency data."
-    database: dtc-course-486211
-    schema: crypto_project1
+    database: {{ env_var('GCP_PROJECT_ID', 'dtc-course-486211') }}
+    schema: {{ env_var('BQ_DATASET', 'crypto_project1') }}
     tables: 
       - name: crypto_data_ext

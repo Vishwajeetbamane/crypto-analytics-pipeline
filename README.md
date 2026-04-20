@@ -17,6 +17,7 @@ Automated ETL pipeline for real-time cryptocurrency data. Fetches top 300 coins 
 - [Features](#features)
 - [Architecture](#architecture)
 - [Quickstart](#quickstart)
+- [Terraform Infra](#terraform-infra)
 - [Configuration](#configuration)
 - [Data Models](#data-models)
 - [Analytics & Visualization](#analytics--visualization)
@@ -33,20 +34,33 @@ Automated ETL pipeline for real-time cryptocurrency data. Fetches top 300 coins 
 - **🐳 Dockerized**: One-command setup (Airflow + Postgres).
 - **📈 Tableau-Ready**: Clean marts for dashboards (total MCAP, volume, top gainers, etc.).
 
-## Architecture
+## Architecture Lineage
 
-```
-CoinGecko API --> ingest.py (Parquet) --> upload.py (GCS Partitioned) --> load_to_bq.py (BQ External) --> dbt stg_crypto --> Marts (agg/top10/fact) --> Tableau
-Airflow DAG orchestrates every 5 mins | Docker Compose runs all
+```mermaid
+graph TB
+  CoinGecko[CoinGecko API] --> Ingestion[ingestion/ingest.py]
+  Ingestion --> Upload[ingestion/upload_gcs/upload.py]
+  Upload --> Load[ingestion/warehouse/load_to_bq.py]
+  Load --> BQExt[BQ crypto_data_ext External]
+  BQExt --> Stg[dbt/models/staging/stg_crypto.sql]
+  Stg --> Marts[dbt/models/marts/*]
+  Marts --> Tableau[Tableau Dashboard]
+  Airflow[airflow/dags/pipeline_dag.py] -.->|DAG| Ingestion
+  Airflow -.->|DAG| Upload
+  Airflow -.->|DAG| Load
+  Airflow -.->|DAG| Stg
+  Docker[Docker Compose] -.-> Airflow
+  Terraform[terraform/] -.->|GCS+BQ| BQExt
 ```
 
-Data Volume: ~300 rows/run (price, MCAP, volume, 24h change/high/low, ATH/ATL, supply, timestamps).
+**Data Flow**: API → Parquet (partitioned GCS) → BQ Ext Table → dbt (view → tables) → Tableau. Runs every 5 mins.
+
+Data Volume: ~300 rows/run (17 cols: price, mcap, volume, etc.).
 
 ## 🚀 Quickstart
 ### Prerequisites
 - Docker & Docker Compose
-- GCP Service Account JSON (BigQuery Data Editor, GCS Storage Admin) → place as `keys/gcp-credentials.json`
-- GCP Project `crypto_project1`, BQ Dataset `crypto_project1`
+- Terraform (provision infra first)
 
 ### 1. Clone & Setup
 ```bash
