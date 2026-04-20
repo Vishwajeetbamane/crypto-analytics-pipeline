@@ -63,17 +63,17 @@ Data Volume: ~300 rows/run (17 cols: price, mcap, volume, etc.).
 
 ### 1. Clone & Setup GCP Keys
 ```bash
-git clone <your-repo>
-cd capstone_DT
+git clone https://github.com/Vishwajeetbamane/crypto-analytics-pipeline.git
+cd crypto-analytics-pipeline
 mkdir -p keys
-cp /path/to/your-gcp-service-account.json keys/gcp-credentials.json  # .gitignore auto-excludes
+cp /path/to/your-gcp-service-account.json keys/gcp-credentials.json 
 ```
 
 ### 2. Env Vars (`.env`)
 ```bash
-GCP_PROJECT_ID=crypto_project1
-BQ_DATASET=crypto_project1
-GOOGLE_APPLICATION_CREDENTIALS=/opt/airflow/keys/gcp-credentials.json
+GCP_PROJECT_ID=<your-gcp-project-id>
+BQ_DATASET=crypto_project1 # or create via Terraform or GCP Console
+GCS_BUCKET_NAME=crypto_project1 # Ensure bucket exists (via Terraform or GCP Console)
 ```
 
 ### 3. Launch Pipeline
@@ -112,7 +112,7 @@ crypto_data_ext --> stg_crypto (view) --> agg_market_overview, top_10_crypto, to
 **Sample Query**:
 ```sql
 SELECT * FROM `crypto_project1.crypto_project1.agg_market_overview` 
-ORDER BY ingestion_time DESC LIMIT 24;  -- Last hour
+ORDER BY ingestion_time DESC LIMIT 300;  -- Last min
 ```
 
 ## 📈 Analytics & Visualization
@@ -120,19 +120,18 @@ ORDER BY ingestion_time DESC LIMIT 24;  -- Last hour
 - **Top 10 Gainers/Losers** (24h % change, interactive filters).
 - **Market Overview**: Total MCAP, volume trends (line/bar charts).
 - **Coin Drilldown**: Prices, volumes over time.
-- **Share**: [Tableau Public Link](https://public.tableau.com/views/YourDashboard) or screenshot below.
 
-![Tableau Dashboard](images/tableau-dashboard.png)
+![Tableau Dashboard 1](images/tableau-dashboard1.png)
+![Tableau Dashboard 2](images/tableau-dashboard2.png)
+![Tableau Dashboard 3](images/tableau-dashboard3.png)
 
 ## Screenshots
-| Airflow DAG | dbt Lineage | Tableau Overview |
-|-------------|-------------|-----------------|
-| ![Airflow](images/airflow-dag.png) | ![dbt](images/dbt-lineage.png) | ![Tableau](images/tableau-dashboard.png) |
+
+| ![Airflow DAG](images/airflow-dag.png) 
 
 *(Add your actual screenshots to `/images/`)*
 
 ## 🔧 Local Development
-- **Manual dbt**: `cd dbt && dbt deps && dbt run && dbt docs generate && dbt docs serve`
 - **Test DAG**: Airflow UI → Trigger DAG manually.
 - **Data Preview**: `gcloud storage ls gs://crypto_project1/parquet/ --recursive`
 
@@ -150,5 +149,4 @@ ORDER BY ingestion_time DESC LIMIT 24;  -- Last hour
 
 
 ## 📄 License
-MIT License - see [LICENSE](LICENSE) *(create if missing)*.
-```
+MIT License - see [LICENSE](LICENSE)

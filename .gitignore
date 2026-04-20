@@ -12,3 +12,5 @@ keys/
 .airflow/
 .env
 .user.yml
+dbt/target/
+dbt/logs/
