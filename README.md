@@ -1,4 +1,3 @@
-```markdown
 # Crypto Market Data Pipeline
 [![Airflow](https://img.shields.io/badge/Airflow-Production-blue)][airflow]
 [![dbt](https://img.shields.io/badge/dbt-Transformation-orange)][dbt]
