@@ -5,7 +5,7 @@ from datetime import datetime
 with DAG(
     dag_id="crypto_pipeline",
     start_date=datetime(2024, 1, 1),
-    schedule_interval="@hourly",
+    schedule_interval="*/5 * * * *",  # Updated to run every 5 minutes
     catchup=False,
     is_paused_upon_creation=False
 ) as dag:

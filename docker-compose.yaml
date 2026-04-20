@@ -1,3 +1,23 @@
+x-airflow-common:
+  &airflow-common
+  build: .
+  env_file:
+    - .env
+  environment:
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__WEBSERVER__SECRET_KEY: "supersecretkey"
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "false"
+    GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/gcp-credentials.json
+  volumes:
+    - ./airflow/dags:/opt/airflow/dags
+    - ./ingestion:/opt/airflow/ingestion
+    - ./dbt:/opt/airflow/dbt
+    - ./keys:/opt/airflow/keys
+  depends_on:
+    postgres:
+      condition: service_healthy
 
 services:
   postgres:
@@ -14,69 +34,17 @@ services:
       retries: 5
 
   airflow-init:
-    build: .
-    depends_on:
-      postgres:
-        condition: service_healthy
-    environment:
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-      AIRFLOW__WEBSERVER__SECRET_KEY: "supersecretkey"
-      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/gcp-credentials.json
-   
-
-    volumes:
-      - ./airflow/dags:/opt/airflow/dags
-      - ./ingestion:/opt/airflow/ingestion
-      - ./dbt:/opt/airflow/dbt
-      - ./keys:/opt/airflow/keys
-      
-
+    <<: *airflow-common
     command: bash -c "airflow db migrate && airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@example.com"
     restart: on-failure
 
   scheduler:
-    build: .
-    depends_on:
-      postgres:
-        condition: service_healthy
-    environment:
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-      AIRFLOW__WEBSERVER__SECRET_KEY: "supersecretkey"
-      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/gcp-credentials.json
-    
-    volumes:
-      - ./airflow/dags:/opt/airflow/dags
-      - ./ingestion:/opt/airflow/ingestion
-      - ./dbt:/opt/airflow/dbt
-      - ./keys:/opt/airflow/keys
-      
-
+    <<: *airflow-common
     command: airflow scheduler
     restart: always
 
   webserver:
-    build: .
-    depends_on:
-      postgres:
-        condition: service_healthy
-    environment:
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-      AIRFLOW__WEBSERVER__SECRET_KEY: "supersecretkey"
-      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/gcp-credentials.json
-     
-
-    volumes:
-      - ./airflow/dags:/opt/airflow/dags
-      - ./ingestion:/opt/airflow/ingestion
-      - ./dbt:/opt/airflow/dbt
-      - ./keys:/opt/airflow/keys
-
+    <<: *airflow-common
     command: airflow webserver
     ports:
       - "8080:8080"

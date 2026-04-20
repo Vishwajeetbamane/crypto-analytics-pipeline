@@ -6,8 +6,9 @@ dist/
 wheels/
 *.egg-info
 
-# Virtual environments
-.venv
 
+.venv
 keys/
 .airflow/
+.env
+.user.yml

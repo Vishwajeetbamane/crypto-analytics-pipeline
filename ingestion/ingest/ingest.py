@@ -1,4 +1,3 @@
-
 import requests
 import time
 from datetime import datetime, timezone
@@ -11,7 +10,7 @@ def run_ingest():
 
     all_data = []
 
-    for page in range(1, 7):
+    for page in range(1, 4):
         response = requests.get(url, params= {
             "vs_currency": "usd",
             "order": "market_cap_desc",
@@ -26,6 +25,7 @@ def run_ingest():
 
 
     df = pd.DataFrame(all_data)
+    print(df.shape)
 
     # selecting only the required columns
     df = df[[
@@ -46,12 +46,29 @@ def run_ingest():
     ]]
 
     # drop rows with any NA value
-    df = df.dropna()
+    # df = df.dropna()
 
+    df = df.astype({
+    'current_price': float,
+    'market_cap': float,
+    'market_cap_rank': float,
+    'total_volume': float,
+    'price_change_percentage_24h': float,
+    'high_24h': float,
+    'low_24h': float,
+    'circulating_supply': float,
+    'ath': float,
+    'atl': float,
+    'id': str,
+    'symbol': str,
+    'name': str,
+    })
 
-    #converting to valid pandas datetime object
-    df["last_updated"] = pd.to_datetime(df["last_updated"])
-    df['market_cap_rank'] = df['market_cap_rank'].fillna(0).astype(int)
+    # Convert 'last_updated' to a pandas datetime object and round to the nearest minute
+    df["last_updated"] = pd.to_datetime(df["last_updated"]).dt.floor('min')
+
+    # Add a new column 'ingestion_time' with the current timestamp
+    df["ingestion_time"] = datetime.now(timezone.utc).replace(second=0, microsecond=0)
 
 
     # saving parquet locally 
