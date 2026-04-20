@@ -121,12 +121,22 @@ ORDER BY ingestion_time DESC LIMIT 300;  -- Last min
 - **Market Overview**: Total MCAP, volume trends (line/bar charts).
 - **Coin Drilldown**: Prices, volumes over time.
 
+<br>
+
 ![Tableau Dashboard 1](images/tableau-dashboard1.png)
 ***Coin Trend (btc selected)***
+
+<br>
+
 ![Tableau Dashboard 2](images/tableau-dashboard2.png)
 ***Top 10 Coins Snapshot***
+
+<br>
+
 ![Tableau Dashboard 3](images/tableau-dashboard3.png)
 ***Time Series Charts***
+
+<br>
 
 ## Screenshots
 
