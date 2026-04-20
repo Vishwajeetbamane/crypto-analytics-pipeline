@@ -4,11 +4,11 @@ from google.cloud import bigquery
 def create_external_table():
     client = bigquery.Client()
 
-    project_id = os.getenv('GCP_PROJECT_ID', 'dtc-course-486211')
-    dataset_id = os.getenv('BQ_DATASET', 'crypto_project1')
+    project_id = os.getenv('GCP_PROJECT_ID')
+    dataset_id = os.getenv('BQ_DATASET')
     table_id = f"{project_id}.{dataset_id}.crypto_data_ext"
 
-    bucket_name = os.getenv('GCS_BUCKET_NAME', 'crypto_project1')
+    bucket_name = os.getenv('GCS_BUCKET_NAME')
 
     external_config = bigquery.ExternalConfig("PARQUET")
     external_config.source_uris = [
